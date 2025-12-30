@@ -3,6 +3,7 @@ package objectOrientedEncapsulation;
 public class Outer {
 
 	static class Inner{
+		//static
 		static void display() {
 			System.out.println("static block");
 		}
