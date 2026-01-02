@@ -22,3 +22,15 @@ public class MethodChaining {
 	}
 
 }
+
+
+
+//Why are a and obj same?
+//a   ─┐
+//├──► MethodChaining object (@5ca881b5)
+//obj ─┘
+
+
+//ClassName@HashCode
+//Both references point to the same object, so output is same.
+//
