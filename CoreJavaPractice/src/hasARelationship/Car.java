@@ -16,6 +16,9 @@ public class Car {
 		this.modelName=modelName;
 		
 	}
+	
+//	has-a relationship ------ 
+	
 //	Engine e=new Engine(1000);   ///// if object creation is this then ---- System.out.println(c.e.getHp());---
 	private Engine e=new Engine(1000);
 	
