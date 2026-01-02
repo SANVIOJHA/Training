@@ -1,4 +1,4 @@
-package hasARelationshipTyres;
+package hasARelationshipTyres_EarlyINstantiation;
 
 public class Main {
 	public static void main(String [] args) {

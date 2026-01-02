@@ -1,4 +1,4 @@
-package hasARelationshipTyres;
+package hasARelationshipTyres_EarlyINstantiation;
 
 public class Car {
 	Tyre[] tyres= {new Tyre("M"),

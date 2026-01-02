@@ -1,4 +1,4 @@
-package hasARelationShip_Practice;
+package hasARelationShip_Practice_EarlyINstantiation;
 
 public class Dept {
 	private String depName;

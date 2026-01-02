@@ -1,4 +1,4 @@
-package hasARelationship_lpu_multipledept;
+package hasARelationship_lpu_multipledept_EarlyINstantiation;
 
 public class Main {
 	public static void main(String[] args) {

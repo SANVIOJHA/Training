@@ -1,4 +1,4 @@
-package hasARelationship;
+package hasARelationship_EarlyINstantiation;
 
 public class Car {
 	private String modelName;

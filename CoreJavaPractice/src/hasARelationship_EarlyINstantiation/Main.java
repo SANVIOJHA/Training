@@ -1,4 +1,4 @@
-package hasARelationship;
+package hasARelationship_EarlyINstantiation;
 
 public class Main {
 	public static void main(String args[]) {
