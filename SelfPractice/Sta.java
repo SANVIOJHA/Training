@@ -29,3 +29,10 @@ public class Sta {
 	}
 
 }
+
+
+///output will be 
+// staic block 
+// non-static block
+// constructor
+/////
