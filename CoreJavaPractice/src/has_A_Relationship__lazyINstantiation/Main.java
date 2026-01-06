@@ -3,6 +3,11 @@ package has_A_Relationship__lazyINstantiation;
 public class Main {
 	public static void main(String[] args) {
 		Car c=new Car();
+		
+		//// lazy instantiation
+		///  //////
+	
+		
 		c.addTyre(new Tyre("m"));
 		c.addTyre(new Tyre("m"));
 		c.addTyre(new Tyre("m"));
