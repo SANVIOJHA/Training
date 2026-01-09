@@ -13,8 +13,10 @@ public class Main {
 		double amount=4986.458d;
 		
 		double time=9;
+		BankAccount a=new BankAccount();
 		
-		BankAccount b;
+		BankAccount b=null;
+		//b.calculateInterest(amount, time);
 		switch(whichAccount) {
 		case 1:{
 			System.out.println("its saving account");
@@ -38,7 +40,8 @@ public class Main {
 		break;
 		
 		default: System.out.println("enter valid input 1  2  3");
-		break;
+		
+		return;
 	
 		
 		}

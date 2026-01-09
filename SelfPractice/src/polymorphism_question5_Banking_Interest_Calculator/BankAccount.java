@@ -7,6 +7,6 @@ public class BankAccount {
 	
 	void calculateInterest(double amount,double time){
 //		double interest=(rate*amount*time)/100;
-		System.out.println("base account");
+		System.out.println("Interest calculation for bank account");
 	}
 }
