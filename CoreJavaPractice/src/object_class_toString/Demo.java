@@ -1,4 +1,4 @@
-package object_class;
+package object_class_toString;
 
 public class Demo {
 
