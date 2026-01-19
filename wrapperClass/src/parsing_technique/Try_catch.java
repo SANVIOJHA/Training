@@ -38,7 +38,7 @@ public class Try_catch {
 		System.out.println("it is Double "+d);
 		}
 		catch(NumberFormatException e) {
-			System.out.println("it is not double ");
+			System.out.println("it is not doub le ");
 		}
 		
 		try {

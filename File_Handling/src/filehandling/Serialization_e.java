@@ -24,7 +24,7 @@ public class Serialization_e implements Serializable{
 	public static void main(String[] args) throws Exception{
 		
 		Serialization_e s=new Serialization_e("abc",678);
-		//data.ser if access is denied
+		//data.ser if access is denied 
 		File f=new File("D:/CAPGEMENI_JAVA_FULLSTACK/file/data.ser");
 		try {
 		f.createNewFile();
