@@ -26,16 +26,18 @@ public class LiteTextEditor {
 
         System.out.println("After Replace:");
         int idx = ed.search("live");
-        ed.replaceText(idx, idx + 4, "real-time");
+        ed.replaceText(idx, idx +4, "real-time");
         System.out.println(ed.current());
+        
         System.out.println();
 
         System.out.println("Substring (0-12):");
-        System.out.println(ed.substring(0, 12));
+        System.out.println(ed.substring(0, 13));
         System.out.println();
 
         System.out.println("Index of 'edit':");
         System.out.println(ed.search("edit"));
+        System.out.println(ed.current());
         System.out.println();
 
         System.out.println("Validation Check:");
@@ -95,6 +97,7 @@ class Editor {
 
     int search(String word) {
         return liveText.indexOf(word);
+        
     }
 
     boolean validate(String input) {
