@@ -56,6 +56,6 @@ public class BloodTest extends DiagnosticTest {
         else if (testPriority == 3 || testPriority == 4)
             discount = baseCost * 0.10;
 
-        return (baseCost + equipmentCost + tax) - discount;
+        return (baseCost + equipmentCost + tax) ;
     }
 }
