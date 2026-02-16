@@ -1,6 +1,8 @@
-package com.cal;
+package com.example.calculator;
 
 public class Calculator {
+
+    // Stateless → Thread-safe
 
     public double add(double a, double b) {
         return a + b;
@@ -44,4 +46,3 @@ public class Calculator {
         return number < 0;
     }
 }
-
