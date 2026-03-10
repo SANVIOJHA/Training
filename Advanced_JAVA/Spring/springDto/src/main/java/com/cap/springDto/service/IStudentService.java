@@ -2,6 +2,7 @@ package com.cap.springDto.service;
 
 
 
+import com.cap.springDto.dto.PageResponseData;
 import com.cap.springDto.dto.StudentRequestDto;
 import com.cap.springDto.dto.StudentResponseDto;
 
@@ -16,4 +17,6 @@ public interface IStudentService {
     StudentResponseDto getStudentById(Integer id);
 
     void deleteStudentById(Integer id);
+
+    PageResponseData<StudentResponseDto> getAllStudents(int page, int size);
 }
