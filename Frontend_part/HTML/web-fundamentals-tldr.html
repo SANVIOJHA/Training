@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Fundamentals TL;DR Notes</title>
+  <style>
+    :root {
+      --bg: #f7f3ea;
+      --paper: #fffdf8;
+      --ink: #1f2937;
+      --muted: #5b6472;
+      --accent: #0f766e;
+      --accent-soft: #dff5f1;
+      --line: #ddd4c8;
+      --head: #7c2d12;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(circle at top left, #f9e8d9 0, transparent 28%),
+        linear-gradient(180deg, #efe7da 0%, var(--bg) 100%);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 32px auto;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 18px 45px rgba(60, 41, 18, 0.08);
+      overflow: hidden;
+    }
+
+    .hero {
+      padding: 34px 36px 24px;
+      background: linear-gradient(135deg, #fff7ec 0%, #eefbf8 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    h1, h2, h3 {
+      margin: 0 0 10px;
+      line-height: 1.2;
+    }
+
+    h1 {
+      color: var(--head);
+      font-size: 2rem;
+    }
+
+    h2 {
+      color: var(--head);
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+
+    h3 {
+      color: var(--accent);
+      font-size: 1rem;
+      margin-top: 16px;
+    }
+
+    p {
+      margin: 8px 0;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 800px;
+    }
+
+    .toolbar {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      color: white;
+      background: var(--accent);
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: var(--accent);
+    }
+
+    .content {
+      padding: 28px 36px 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px 18px;
+      background: #fffefb;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.82rem;
+      margin-bottom: 8px;
+    }
+
+    ul {
+      margin: 8px 0 0 18px;
+      padding: 0;
+    }
+
+    li {
+      margin: 4px 0;
+    }
+
+    code, pre {
+      font-family: Consolas, "Courier New", monospace;
+    }
+
+    pre {
+      margin: 10px 0;
+      padding: 12px;
+      background: #f8fafc;
+      border: 1px solid #dbe4ee;
+      border-radius: 10px;
+      white-space: pre-wrap;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 16px;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      border: 1px solid var(--line);
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f8efe3;
+      color: #6c2d14;
+    }
+
+    .qa {
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+      margin: 10px 0;
+    }
+
+    .footer {
+      padding: 18px 36px 30px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+
+      .page {
+        margin: 0;
+        max-width: none;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .toolbar {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <h1>Web Fundamentals TL;DR</h1>
+      <p class="subtitle">
+        Compact revision notes made from your class topics. Focused on what, why, where, how, comparisons, and interview-ready answers.
+      </p>
+      <div class="toolbar">
+        <button class="btn" onclick="window.print()">Download / Save as PDF</button>
+        <a class="btn secondary" href="#interview">Jump to Interview Q&amp;A</a>
+      </div>
+    </section>
+
+    <section class="content">
+      <h2>1. Why the Web Exists</h2>
+      <div class="card">
+        <p><strong>What:</strong> The World Wide Web is a system for accessing and sharing documents and resources over the Internet.</p>
+        <p><strong>Why:</strong> It solved the problem of isolated computers and difficult information sharing.</p>
+        <p><strong>Where Used:</strong> Websites, web apps, education portals, e-commerce, banking, social media.</p>
+        <p><strong>How:</strong> Browser + URL + HTTP/HTTPS + server work together to fetch and display resources.</p>
+        <p><strong>Core idea:</strong> Access information from anywhere using standard rules.</p>
+      </div>
+
+      <h2>2. Internet vs Web</h2>
+      <table>
+        <tr>
+          <th>Concept</th>
+          <th>Meaning</th>
+          <th>Interview Line</th>
+        </tr>
+        <tr>
+          <td>Internet</td>
+          <td>Global network of connected computers</td>
+          <td>Infrastructure</td>
+        </tr>
+        <tr>
+          <td>Web</td>
+          <td>Collection of websites and web resources on the Internet</td>
+          <td>Application/service on top of the Internet</td>
+        </tr>
+      </table>
+
+      <h2>3. Core Components of the Web</h2>
+      <div class="grid">
+        <article class="card">
+          <span class="pill">Client</span>
+          <p><strong>What:</strong> Browser that sends requests and shows output.</p>
+          <p><strong>Examples:</strong> Chrome, Firefox, Edge.</p>
+          <p><strong>Why:</strong> Acts as interface between user and web.</p>
+        </article>
+        <article class="card">
+          <span class="pill">Server</span>
+          <p><strong>What:</strong> System that receives requests and returns resources/data.</p>
+          <p><strong>Examples:</strong> Apache, Nginx, Spring Boot server.</p>
+          <p><strong>Why:</strong> Centralized processing and data access.</p>
+        </article>
+        <article class="card">
+          <span class="pill">Protocol</span>
+          <p><strong>What:</strong> Rules of communication.</p>
+          <p><strong>Examples:</strong> HTTP, HTTPS.</p>
+          <p><strong>Why:</strong> Standard format for request-response exchange.</p>
+        </article>
+        <article class="card">
+          <span class="pill">DNS</span>
+          <p><strong>What:</strong> Converts domain name into IP address.</p>
+          <p><strong>Why:</strong> Humans remember names; computers use numbers.</p>
+        </article>
+      </div>
+
+      <h2>4. Request-Response Lifecycle</h2>
+      <pre>User
+  ↓
+Browser
+  ↓
+DNS Lookup
+  ↓
+TCP Connection
+  ↓
+HTTP Request
+  ↓
+Server + Backend + Database
+  ↓
+HTTP Response
+  ↓
+Browser Rendering
+  ↓
+Visible UI</pre>
+
+      <div class="card">
+        <p><strong>Step 1:</strong> User enters URL.</p>
+        <p><strong>Step 2:</strong> Browser resolves domain through DNS.</p>
+        <p><strong>Step 3:</strong> Browser creates TCP connection with server.</p>
+        <p><strong>Step 4:</strong> Browser sends HTTP request.</p>
+        <p><strong>Step 5:</strong> Server processes request and may query database.</p>
+        <p><strong>Step 6:</strong> Server sends HTTP response.</p>
+        <p><strong>Step 7:</strong> Browser renders page.</p>
+      </div>
+
+      <h3>Browser Rendering Pipeline</h3>
+      <table>
+        <tr>
+          <th>Stage</th>
+          <th>Meaning</th>
+        </tr>
+        <tr>
+          <td>DOM</td>
+          <td>HTML parsed into a tree</td>
+        </tr>
+        <tr>
+          <td>CSSOM</td>
+          <td>CSS parsed into a style tree</td>
+        </tr>
+        <tr>
+          <td>Render Tree</td>
+          <td>DOM + CSSOM combined</td>
+        </tr>
+        <tr>
+          <td>Layout</td>
+          <td>Positions and sizes calculated</td>
+        </tr>
+        <tr>
+          <td>Paint</td>
+          <td>Pixels drawn on screen</td>
+        </tr>
+      </table>
+
+      <h2>5. Evolution of Web Technologies</h2>
+      <table>
+        <tr>
+          <th>Technology</th>
+          <th>Purpose</th>
+          <th>Problem It Solved</th>
+        </tr>
+        <tr>
+          <td>HTML</td>
+          <td>Structure</td>
+          <td>Created static document layout</td>
+        </tr>
+        <tr>
+          <td>CSS</td>
+          <td>Styling</td>
+          <td>Improved design and layout</td>
+        </tr>
+        <tr>
+          <td>JavaScript</td>
+          <td>Behavior</td>
+          <td>Added interactivity and dynamic updates</td>
+        </tr>
+      </table>
+
+      <h2>6. HTML Evolution</h2>
+      <table>
+        <tr>
+          <th>Version</th>
+          <th>Important Feature</th>
+        </tr>
+        <tr>
+          <td>HTML1</td>
+          <td>Basic page structure</td>
+        </tr>
+        <tr>
+          <td>HTML2</td>
+          <td>Forms</td>
+        </tr>
+        <tr>
+          <td>HTML3</td>
+          <td>Tables</td>
+        </tr>
+        <tr>
+          <td>HTML4</td>
+          <td>Better structure, CSS integration</td>
+        </tr>
+        <tr>
+          <td>XHTML</td>
+          <td>Strict syntax rules</td>
+        </tr>
+        <tr>
+          <td>HTML5</td>
+          <td>Semantic tags, audio, video, modern APIs</td>
+        </tr>
+      </table>
+
+      <h2>7. Semantic HTML</h2>
+      <div class="card">
+        <p><strong>What:</strong> HTML tags that carry meaning, not just appearance.</p>
+        <p><strong>Why:</strong> Better SEO, accessibility, readability, and maintainability.</p>
+        <p><strong>Where Used:</strong> Blogs, landing pages, article pages, dashboards, web apps.</p>
+        <p><strong>How:</strong> Replace generic containers with meaningful tags like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>.</p>
+      </div>
+
+      <table>
+        <tr>
+          <th>Tag</th>
+          <th>Purpose</th>
+        </tr>
+        <tr><td>&lt;header&gt;</td><td>Top/introduction area</td></tr>
+        <tr><td>&lt;nav&gt;</td><td>Navigation links</td></tr>
+        <tr><td>&lt;main&gt;</td><td>Main content</td></tr>
+        <tr><td>&lt;section&gt;</td><td>Thematic section</td></tr>
+        <tr><td>&lt;article&gt;</td><td>Independent content block</td></tr>
+        <tr><td>&lt;aside&gt;</td><td>Sidebar/related content</td></tr>
+        <tr><td>&lt;footer&gt;</td><td>Bottom area</td></tr>
+      </table>
+
+      <pre>&lt;header&gt;Website Header&lt;/header&gt;
+&lt;nav&gt;Menu&lt;/nav&gt;
+&lt;main&gt;
+  &lt;section&gt;
+    &lt;article&gt;Blog Content&lt;/article&gt;
+  &lt;/section&gt;
+&lt;/main&gt;
+&lt;footer&gt;Footer&lt;/footer&gt;</pre>
+
+      <h2>8. HTML Basic Structure</h2>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+      <table>
+        <tr>
+          <th>Part</th>
+          <th>Why It Matters</th>
+        </tr>
+        <tr><td>DOCTYPE</td><td>Tells browser to use HTML5 mode</td></tr>
+        <tr><td>html</td><td>Root of document</td></tr>
+        <tr><td>head</td><td>Metadata, title, links, scripts</td></tr>
+        <tr><td>body</td><td>Visible content</td></tr>
+      </table>
+
+      <h2>9. Block vs Inline vs Inline-Block</h2>
+      <table>
+        <tr>
+          <th>Feature</th>
+          <th>Block</th>
+          <th>Inline</th>
+          <th>Inline-Block</th>
+        </tr>
+        <tr><td>New line</td><td>Yes</td><td>No</td><td>No</td></tr>
+        <tr><td>Width</td><td>Full available width</td><td>Content width</td><td>Custom width allowed</td></tr>
+        <tr><td>Height</td><td>Yes</td><td>No direct effect</td><td>Yes</td></tr>
+        <tr><td>Best use</td><td>Layout containers</td><td>Text-level elements</td><td>Buttons/cards/menu items</td></tr>
+      </table>
+
+      <h2>10. Formatting Tags</h2>
+      <table>
+        <tr>
+          <th>Tag Pair</th>
+          <th>Difference</th>
+        </tr>
+        <tr><td>&lt;b&gt; vs &lt;strong&gt;</td><td>Both may look bold, but <code>strong</code> adds semantic importance.</td></tr>
+        <tr><td>&lt;i&gt; vs &lt;em&gt;</td><td>Both may look italic, but <code>em</code> adds emphasis meaning.</td></tr>
+        <tr><td>&lt;mark&gt;</td><td>Highlights text</td></tr>
+        <tr><td>&lt;del&gt; / &lt;ins&gt;</td><td>Deleted / inserted text</td></tr>
+        <tr><td>&lt;sub&gt; / &lt;sup&gt;</td><td>Subscript / superscript</td></tr>
+      </table>
+
+      <h2>11. Headings</h2>
+      <div class="card">
+        <p><strong>What:</strong> Heading tags from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>.</p>
+        <p><strong>Why:</strong> Improve structure, accessibility, SEO, and readability.</p>
+        <p><strong>Best Practice:</strong> Usually one main <code>&lt;h1&gt;</code>, then proper hierarchy.</p>
+      </div>
+
+      <h2>12. Attributes</h2>
+      <table>
+        <tr>
+          <th>Type</th>
+          <th>Examples</th>
+          <th>Use</th>
+        </tr>
+        <tr><td>Global</td><td><code>id</code>, <code>class</code></td><td>General identification/styling</td></tr>
+        <tr><td>Specific</td><td><code>href</code>, <code>src</code></td><td>Element-specific behavior</td></tr>
+        <tr><td>Boolean</td><td><code>checked</code>, <code>disabled</code></td><td>True/false state</td></tr>
+        <tr><td>Custom</td><td><code>data-*</code></td><td>Store custom data</td></tr>
+      </table>
+
+      <h2>13. id vs class</h2>
+      <table>
+        <tr>
+          <th>Feature</th>
+          <th>id</th>
+          <th>class</th>
+        </tr>
+        <tr><td>Unique</td><td>Yes</td><td>No</td></tr>
+        <tr><td>Selector</td><td><code>#</code></td><td><code>.</code></td></tr>
+        <tr><td>Best use</td><td>Single unique element</td><td>Reusable styles/grouping</td></tr>
+      </table>
+
+      <h2>14. Anchor Tag</h2>
+      <pre>&lt;a href="https://example.com" target="_blank" rel="noopener noreferrer"&gt;Link&lt;/a&gt;</pre>
+      <table>
+        <tr>
+          <th>Target</th>
+          <th>Meaning</th>
+        </tr>
+        <tr><td>_self</td><td>Open in same tab</td></tr>
+        <tr><td>_blank</td><td>Open in new tab</td></tr>
+        <tr><td>_parent</td><td>Open in parent frame</td></tr>
+        <tr><td>_top</td><td>Open in full window</td></tr>
+      </table>
+
+      <h2>15. Final Big Picture</h2>
+      <pre>User
+  ↓
+Browser (Client)
+  ↓
+DNS
+  ↓
+Server
+  ↓
+Backend Logic
+  ↓
+Database
+  ↓
+Response (HTML/CSS/JS)
+  ↓
+Browser Rendering
+  ↓
+UI Display</pre>
+
+      <h2 id="interview">16. Interview Preparation</h2>
+      <h3>Conceptual Questions</h3>
+      <div class="qa">
+        <p><strong>Q:</strong> What happens when you enter a URL?</p>
+        <p><strong>A:</strong> DNS resolution, TCP connection, HTTP request, server processing, HTTP response, browser rendering.</p>
+      </div>
+      <div class="qa">
+        <p><strong>Q:</strong> What is client-server architecture?</p>
+        <p><strong>A:</strong> Client sends requests, server processes them and sends responses.</p>
+      </div>
+      <div class="qa">
+        <p><strong>Q:</strong> What is DOM?</p>
+        <p><strong>A:</strong> A tree representation of the HTML document created by the browser.</p>
+      </div>
+      <div class="qa">
+        <p><strong>Q:</strong> Why semantic HTML?</p>
+        <p><strong>A:</strong> Better SEO, accessibility, and readable structure.</p>
+      </div>
+      <div class="qa">
+        <p><strong>Q:</strong> Difference between SPA and MPA?</p>
+        <p><strong>A:</strong> SPA updates content without full reload; MPA loads a new page for each route.</p>
+      </div>
+
+      <h3>Scenario-Based Questions</h3>
+      <div class="qa">
+        <p><strong>Q:</strong> A website is slow to open. What could be the reason?</p>
+        <p><strong>A:</strong> DNS delay, slow server, heavy database query, large response, or slow browser rendering.</p>
+      </div>
+      <div class="qa">
+        <p><strong>Q:</strong> Why prefer <code>class</code> over <code>id</code> for repeated components?</p>
+        <p><strong>A:</strong> Because class is reusable across multiple elements.</p>
+      </div>
+
+      <h3>Coding / Real-World Questions</h3>
+      <div class="qa">
+        <p><strong>Q:</strong> Write semantic page structure.</p>
+        <p><strong>A:</strong> Use <code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>, <code>article</code>, <code>footer</code>.</p>
+      </div>
+      <div class="qa">
+        <p><strong>Q:</strong> Write a safe anchor tag opening in new tab.</p>
+        <p><strong>A:</strong> Use <code>target="_blank"</code> with <code>rel="noopener noreferrer"</code>.</p>
+      </div>
+
+      <h2>17. One-Line Memory Tricks</h2>
+      <ul>
+        <li><strong>Browser = Customer</strong></li>
+        <li><strong>Server = Kitchen</strong></li>
+        <li><strong>Request = Order</strong></li>
+        <li><strong>Response = Food</strong></li>
+        <li><strong>HTML = Structure, CSS = Style, JavaScript = Behavior</strong></li>
+      </ul>
+    </section>
+
+    <section class="footer">
+      Open this file in any browser and use the “Download / Save as PDF” button to keep a printable copy.
+    </section>
+  </main>
+</body>
+</html>
