@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Beginner Course</title>
+  <link rel="stylesheet" href="../course.css">
+</head>
+<body>
+  <div class="layout">
+    <header class="hero course-header">
+      <a class="back-link" href="../index.html">Back to course home</a>
+      <p class="eyebrow">CSS Folder</p>
+      <h1>Learn CSS from Scratch</h1>
+      <p class="lead">
+        CSS stands for Cascading Style Sheets. It is used to style HTML content. CSS controls colors, fonts, spacing, alignment, layouts, and responsiveness.
+      </p>
+    </header>
+
+    <main class="chapter-list">
+      <section class="chapter">
+        <h2>Chapter 1: What CSS is and why we use it</h2>
+        <p>
+          HTML gives structure, but the page will look plain without CSS. CSS makes the page attractive and easier to read.
+        </p>
+        <ul>
+          <li>HTML says what the content is.</li>
+          <li>CSS says how the content should look.</li>
+        </ul>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 2: Ways to add CSS</h2>
+        <pre><code>Inline CSS:
+&lt;p style="color: red;"&gt;Hello&lt;/p&gt;
+
+Internal CSS:
+&lt;style&gt;
+  p { color: red; }
+&lt;/style&gt;
+
+External CSS:
+&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
+        <div class="tip">
+          External CSS is the best choice for most projects because it keeps styling separate from HTML.
+        </div>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 3: CSS syntax</h2>
+        <pre><code>selector {
+  property: value;
+}</code></pre>
+        <pre><code>h1 {
+  color: blue;
+  font-size: 32px;
+}</code></pre>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 4: Selectors</h2>
+        <pre><code>p {
+  color: green;
+}
+
+.card {
+  background: white;
+}
+
+#main-title {
+  color: brown;
+}</code></pre>
+        <ul>
+          <li>Element selector targets all matching tags.</li>
+          <li>Class selector is reusable.</li>
+          <li>ID selector is for one unique element.</li>
+        </ul>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 5: Colors, backgrounds, and text styling</h2>
+        <pre><code>body {
+  background-color: #f4f4f4;
+  color: #333333;
+}
+
+h1 {
+  color: darkblue;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}</code></pre>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 6: Fonts</h2>
+        <pre><code>body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+}</code></pre>
+        <p>
+          Fonts affect readability and design. Choose simple fonts first while learning.
+        </p>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 7: The box model</h2>
+        <p>
+          Every element is a box made of content, padding, border, and margin.
+        </p>
+        <pre><code>.box {
+  width: 250px;
+  padding: 20px;
+  border: 2px solid black;
+  margin: 30px;
+}</code></pre>
+        <ul>
+          <li>Padding is inner space.</li>
+          <li>Margin is outer space.</li>
+          <li>Border is the visible boundary.</li>
+        </ul>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 8: Width, height, and units</h2>
+        <ul>
+          <li>`px` for fixed size</li>
+          <li>`%` for relative size</li>
+          <li>`rem` for scalable text and spacing</li>
+          <li>`vh` and `vw` for viewport size</li>
+        </ul>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 9: Display values</h2>
+        <pre><code>.one { display: block; }
+.two { display: inline; }
+.three { display: inline-block; }
+.four { display: none; }</code></pre>
+        <p>
+          These values control how elements behave in the page flow.
+        </p>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 10: Positioning</h2>
+        <ul>
+          <li>`static` is default</li>
+          <li>`relative` moves from normal position</li>
+          <li>`absolute` positions against the nearest positioned parent</li>
+          <li>`fixed` stays fixed on screen</li>
+          <li>`sticky` sticks after a scroll point</li>
+        </ul>
+        <pre><code>.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}</code></pre>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 11: Flexbox</h2>
+        <p>
+          Flexbox is used when you want items in a row or column and need easy alignment.
+        </p>
+        <pre><code>.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}</code></pre>
+        <div class="tip">
+          Use Flexbox for navbars, rows of cards, centered content, and button groups.
+        </div>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 12: CSS Grid</h2>
+        <p>
+          Grid is used for two-dimensional layouts with rows and columns.
+        </p>
+        <pre><code>.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}</code></pre>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 13: Responsive design</h2>
+        <p>
+          A responsive page works properly on mobile, tablet, and desktop.
+        </p>
+        <pre><code>@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}</code></pre>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 14: Pseudo-classes and hover effects</h2>
+        <pre><code>a:hover {
+  color: red;
+}
+
+input:focus {
+  border-color: blue;
+}</code></pre>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 15: Transitions and basic animations</h2>
+        <pre><code>button {
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: teal;
+}</code></pre>
+        <p>
+          Use animation carefully. It should help the user, not distract the user.
+        </p>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 16: Practice project ideas for CSS</h2>
+        <ol>
+          <li>Style your profile page.</li>
+          <li>Create a navbar.</li>
+          <li>Create a card layout.</li>
+          <li>Create a responsive landing page.</li>
+        </ol>
+        <div class="tip">
+          Goal before moving to JavaScript: you should be comfortable styling a page, using spacing correctly, and building simple layouts with Flexbox and Grid.
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

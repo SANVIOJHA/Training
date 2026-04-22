@@ -1,0 +1,34 @@
+react
+//virtual dom
+//single page
+
+
+diffing algorithm---old dom + virtual dom--- the changes made is diffing algorithm--then it will update into real previous dom ---this whole process is called reconcillanation process
+
+react
+is js frontend library
+used to create single page application and attractive ui
+
+
+features
+single page
+virtual dom
+declarative
+just tell what to do 
+jsx
+one way data binding
+architecture -----component based--- reusable block of code
+
+history
+
+jordan walke 2011 working facebook
+2013 open source
+2014 used in instagram
+latest version--- react 19
+
+
+single page vs multi page application
+
+
+
+

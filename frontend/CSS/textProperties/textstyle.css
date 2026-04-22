@@ -1,0 +1,76 @@
+/* remove navigation link underline */
+
+* {
+    margin: 0;
+    /* padding: 0;
+    box-sizing: border-box; */
+}
+
+
+nav a {
+    text-decoration: none;
+    text-transform: lowercase;
+    font-style: italic;
+
+}
+
+/* add underline on hover */
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    color: salmon;
+    background-color: rgb(255, 0, 102);
+    text-align: center;
+    text-decoration: underline;
+    letter-spacing: 40px;
+    text-shadow: -10px -10px 5px rgb(12, 26, 223);
+
+
+}
+
+
+
+/* p{
+    line-height: 40px;
+    /* letter-spacing: 40px; 
+word-spacing: 40px;
+text-indent: 150px;
+/*starting will affected*/
+/* default font size 32 px 
+font-size: 32px;
+font-family:Verdana,
+Geneva,
+Tahoma,
+sans-serif;
+font-weight:1000;
+font-style: italic;
+
+}
+*/ 
+h2 {
+    color: salmon;
+
+    text-align: center;
+    text-decoration: underline;
+    letter-spacing: 40px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: oblique;
+
+
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+
+
+
+}
+
+
+/* position*/
+ 

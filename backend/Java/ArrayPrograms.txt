@@ -1,0 +1,25 @@
+1)WAJP Print element in array which is divisible by 5 ?
+2)WAJP Print even index element in an array?
+3)WAJP Print even element in an array?
+4)WAJP Print odd index element in an array?
+5)WAJP Print odd element in an array?
+6)WAJP Print positive even element in an array?
+7)WAJP Print First Element and last element?
+8)WAJP Find Sum of array elements?
+9)WAJP Find Sum of even element in an array?
+10)WAJP Find Sum of Odd element in an array?
+11)WAJP Find Average of an array?
+12)WAJP Find Average of even element in an array?
+13)WAJP Find difference of Even sum and Odd sum?
+14)WAJP Print Armstrong element in an array
+15)WAJP Print Palindrome element in an array?
+16)WAJP Print Prime element in an array?
+17)WAJP Check Array is palindrome or not?
+18)WAJP Copy one array element to another array?
+19)WAJP Insert element at particular index?
+21)WAJP Merge given two array?
+22)WAJP Reverse array element ?
+23)WAJP Reverse each element in an array?
+24)WAJP Insert element at particular position?
+25)WAJP Find Largest element in an array?
+26)WAJP Find 2nd largest element in an array?

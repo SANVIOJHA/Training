@@ -1,0 +1,92 @@
+##server:
+##  port: 9191
+##spring:
+##  application:
+##    name: card
+##  datasource:
+##    driver-class-name: com.mysql.cj.jdbc.Driver
+##    password: Aayushi@02
+##    url: jdbc:mysql://localhost:3306/HJPA_DB1?createDatabaseIfNotExist=true
+##    username: root
+##  jpa:
+##    hibernate:
+##      ddl-auto: update
+##    properties:
+##      hibernate:
+##        dialect: org.hibernate.dialect.MySQLDialect
+#version: "3.8"
+#services:
+#  carddb:
+#    image: mysql:8
+#    container_name: carddb
+#    ports:
+#      - "3307:3306"
+#    environment:
+#      MYSQL_ROOT_PASSWORD: Aayushi@02
+#      MYSQL_DATABASE: root
+#    healthcheck:
+#      test: ["CMD","mysqladmin","ping","-h","localhost"]
+#      timeout: 10s
+#      retries: 10
+#      interval: 10s
+#      start_period: 10s
+#    networks:
+#      - banking
+#  card:
+#    image: aayushi2102/myimage:latest
+#    container_name: card-ms
+#    ports:
+#      - "9191:9191"
+#    depends_on:
+#      carddb:
+#        condition: service_healthy
+#    environment:
+#      SPRING_DATABASE_URL: jdbc:mysql://carddb   :3306/cardDB
+#      SPRING_DATABASE_USERNAME: root
+#      SPRING_DATABASE_PASSWORD: Aayushi@02
+#    deploy:
+#      resources:
+#        limits:
+#          memory: 700m
+#    networks:
+#      - banking
+#networks:
+#  banking:
+#    driver: bridge
+#
+services:
+
+  carddb:
+    image: mysql:8
+    container_name: card-db
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: CardsDB
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks:
+      - banking
+
+  card:
+    image: aayushi2102/myimage:latest
+    container_name: cards-ms
+    ports:
+      - "9191:9191"
+    depends_on:
+      carddb:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://carddb:3306/CardsDB?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    networks:
+      - banking
+
+networks:
+  banking:
+    driver: bridge

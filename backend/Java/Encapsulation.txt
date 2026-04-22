@@ -1,0 +1,69 @@
+1. Bank Account
+
+Write a Java program to create a BankAccount class with:
+accountNumber and balance as private
+methods: deposit(), withdraw(), and getBalance()
+ensure balance cannot be directly modified
+
+2. Student Marks
+
+Write a Java program where:
+marks is a private variable
+provide methods to set and get marks
+do not allow marks greater than 100
+
+3. Employee Salary
+
+Create an Employee class with:
+salary as private
+methods to set and get salary
+salary cannot be negative
+
+4. ATM PIN
+
+Write a Java program where:
+pin is private
+user can change PIN only after verification
+direct access to PIN is not allowed
+
+5. Mobile Battery
+
+Write a Java program where:
+batteryLevel is private
+methods to charge and use battery
+battery level must stay between 0 and 100
+
+6. Library Book
+
+Create a Book class where:
+price is private
+provide methods to update and display price
+price cannot be negative
+
+7. Online Shopping Cart
+
+Write a Java program where:
+totalAmount is private
+methods to add and remove items
+user cannot directly change total amount
+
+8. Exam Result
+
+Write a Java program where:
+result is private
+result is calculated using marks
+users can only view the result
+
+9. Vehicle Speed Control
+
+Write a Java program where:
+speed is private
+methods to increase and decrease speed
+speed cannot exceed a fixed limit
+
+10. Password Protection
+
+Write a Java program where:
+password is private
+allow password change only after validation
+password cannot be displayed directly

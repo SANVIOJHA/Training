@@ -1,0 +1,172 @@
+:root {
+  --bg: #f4efe7;
+  --paper: #fffdf9;
+  --ink: #202534;
+  --muted: #596273;
+  --accent: #0f766e;
+  --warm: #91441f;
+  --line: #d8ccbd;
+  --shadow: 0 18px 40px rgba(65, 43, 18, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(245, 210, 168, 0.55), transparent 30%),
+    linear-gradient(180deg, #efe6d9 0%, var(--bg) 100%);
+}
+
+.layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 16px 48px;
+}
+
+.hero,
+.panel,
+.card,
+.chapter {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.hero {
+  padding: 32px;
+  margin-bottom: 22px;
+}
+
+.eyebrow,
+.tag {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.lead {
+  max-width: 760px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.content {
+  display: grid;
+  gap: 22px;
+}
+
+.panel {
+  padding: 24px;
+}
+
+.panel ul,
+.panel ol,
+.chapter ul,
+.chapter ol {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  display: block;
+  padding: 22px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 160ms ease, border-color 160ms ease;
+}
+
+.card:hover,
+.card:focus-visible {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.card p:last-child,
+.chapter p,
+.chapter li {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.course-header {
+  margin-bottom: 20px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.chapter-list {
+  display: grid;
+  gap: 18px;
+}
+
+.chapter {
+  padding: 24px;
+}
+
+.chapter h2,
+.chapter h3,
+.hero h1,
+.panel h2,
+.card h2 {
+  color: var(--warm);
+}
+
+pre {
+  margin: 14px 0 0;
+  padding: 14px;
+  overflow-x: auto;
+  border-radius: 16px;
+  border: 1px solid #d6e1eb;
+  background: #f8fbfe;
+  line-height: 1.6;
+}
+
+code {
+  font-family: Consolas, "Courier New", monospace;
+}
+
+.tip {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-left: 4px solid var(--accent);
+  background: rgba(15, 118, 110, 0.08);
+  border-radius: 12px;
+}
+
+.two-col {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+@media (max-width: 640px) {
+  .hero,
+  .panel,
+  .card,
+  .chapter {
+    border-radius: 18px;
+  }
+}

@@ -1,0 +1,97 @@
+superset of javascripts---all features of js can be used and some extra features
+programming lanuguage
+optionally statically type
+<!-- it provide type safety  -->
+
+
+features
+supports static typing
+type inference
+supports es6 and new features
+cross browser compatible 
+compile language ---error will be detected at compile time 
+
+why ts when there's js?
+errors will occur at compile time
+it provides type safety ---we cant be like let a=7; then a='san'---
+
+
+history
+
+by microsoft in 2012----introduced
+2014 --- >1st version--- ---ts 1.0
+2016 ---- > angular used ts
+2026 --- > Typescript 6.02
+
+
+installation
+nvm version
+nvm use latest
+nvm install latest
+node -v
+npm -v
+npm i -g typescript
+tsc -v  ----tsc ---tyoescriptcompiler
+
+
+to run
+in cmd its working---
+npm -v
+tsc script.ts
+node script.js
+
+
+
+//if we open both js and ts fie at same time then error will occur 
+Cannot redeclare block-scoped variable 'a'.
+//export{};---is used to resolve the issue
+
+
+special type
+any never void unknow null
+
+
+//type inference//--no new type
+
+diffrence between these two
+
+//type annotation
+
+
+
+
+for config ----  tsc --init
+
+if we have tsconfig.json then normal compilation will not work-----
+
+so > tsc ---- it will compile entire file
+then node filename.js
+
+
+
+
+
+
+  //  can make these false to remove script.js.map
+    //  "sourceMap": true,
+    // "declaration": true,
+    // "declarationMap": true,
+
+
+
+
+
+again again compilation is tedious 
+so we will use --- tsc filename.ts -w ------its watch time 
+
+
+
+
+
+tsc convert ts to js ---one high level into another high level 
+
+
+
+
+//intersection---and  &
+//union ---or |

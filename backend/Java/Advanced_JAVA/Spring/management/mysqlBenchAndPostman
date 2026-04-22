@@ -1,0 +1,30 @@
+in mysql bench ----
+CREATE DATABASE management_db;
+show databases;
+use management_db;
+SHOW TABLES;
+Select *from category;
+Select *from product;
+
+
+
+
+
+
+
+in postman ---
+
+POST http://localhost:8080/categories
+ {
+  "categoryName": "Fashion",
+  "description": "Clothing and accessories"
+}
+
+
+
+GET http://localhost:8080/categories
+
+
+GET http://localhost:8080/products/1
+
+GET http://localhost:8080/products/search?name=laptop

@@ -1,0 +1,31 @@
+nav a{
+    height: 70px;
+    width: 100px;
+    background-color: rgb(198, 122, 122);
+    color: rgb(40, 3, 3);
+    display: inline-block;
+}
+
+
+h1{
+    padding: 10px;
+    background-color: rgb(198, 122, 122);
+    color: rgb(163, 211, 3);
+    display: inline-block;
+
+}
+
+footer a{
+    
+    background-color: rgb(236, 14, 14);
+    color: aqua;
+    padding: 20px;
+    display:inline-block;
+}
+/* difference between hover and visibility hidden??? */
+h1:hover{
+    /* display: none; */
+    display: inline-block;
+    color: aqua;
+
+}

@@ -1,0 +1,54 @@
+/* .cont{
+    height: 200px;
+    width: 200px;
+    background-color: lightcoral;
+    top: 200px;
+    left: 200px;
+    position:relative;
+  
+}
+
+.box{
+    height: 200px;
+    width: 100px;
+    background-color: lightblue;
+    /* top: 50px;
+    left: 50px; 
+    right: 50px;
+    position:relative;
+
+
+    
+}   
+
+.bx{
+    height: 100px;
+    width: 200px;
+    background-color: rgb(39, 9, 55);
+    top: 150px;
+    left: 0px; 
+    right:5px;
+
+    position:absolute;
+}
+ */
+
+
+
+/* p{
+    font-size: 40px;
+
+} */
+
+
+
+nav{
+    height: 75px;
+    width: 100vw;
+    position: fixed;
+    top: 50;
+    background-color: #c59e9e;
+
+}
+
+

@@ -1,0 +1,67 @@
+1. Single Inheritance (Person → Student)
+
+Write a Java program where:
+Person class has name and age
+Student class inherits Person and has rollNo and marks
+Display all details
+
+2. Single Inheritance (Vehicle → Car)
+
+Create a program where:
+Vehicle has speed and fuelType
+Car inherits Vehicle and has brand
+Show car details
+
+3. Multilevel Inheritance (Animal → Mammal → Dog)
+
+Write a Java program to demonstrate:
+Animal class with method eat()
+Mammal inherits Animal
+Dog inherits Mammal and adds method bark()
+
+4. Hierarchical Inheritance (Shape → Circle, Rectangle)
+
+Write a Java program where:
+Shape has a method draw()
+Circle and Rectangle inherit Shape
+Override draw() in both classes
+
+5. Inheritance with Method Overriding
+
+Create a program where:
+Bank class has method getInterestRate()
+SBI and HDFC inherit Bank
+Override interest rate method
+
+6. Employee Inheritance
+
+Write a Java program where:
+Employee has name and salary
+Manager inherits Employee and adds department
+Display complete details
+
+7. Inheritance and Constructors
+
+Write a Java program where:
+Base class Account has constructor to initialize accountNo
+Derived class SavingsAccount adds interestRate
+Use super keyword
+
+8. Inheritance with Access Modifiers
+
+Create a program showing:
+protected variables in a parent class
+Accessing them in a child class
+
+9. Inheritance and Method Reuse
+
+Write a Java program where:
+Calculator has method add()
+AdvancedCalculator inherits Calculator and adds multiply()
+
+10. Inheritance with Real-Life Example
+
+Design a program where:
+Teacher inherits Person
+Add subject and salary
+Demonstrate reuse of code

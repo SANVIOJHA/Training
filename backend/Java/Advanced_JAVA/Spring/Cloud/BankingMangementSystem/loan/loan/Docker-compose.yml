@@ -1,0 +1,36 @@
+services:
+
+  loandb:
+    image: mysql:8
+    container_name: loan-db
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: LoansDB
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks:
+      - banking
+
+  loan:
+    image: sa2102/myimage:latest
+    container_name: loan-ms
+    ports:
+      - "9190:9190"
+    depends_on:
+      loandb:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://loandb:3306/LoansDB?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: tiger
+    networks:
+      - banking
+
+networks:
+  banking:
+    driver: bridge

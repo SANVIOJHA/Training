@@ -1,0 +1,68 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: "cards"
+  profiles:
+    active: "prod"
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/cardsdb  # Update to your MySQL database name
+    username: root # Your MySQL username
+    password: tiger  # Your MySQL password
+    driver-class-name: com.mysql.cj.jdbc.Driver  # Specify MySQL driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect  # Use MySQL dialect
+    hibernate:
+      ddl-auto: update  # Automatically update the database schema
+    show-sql: true  # Log SQL queries
+
+  config:
+    import: "optional:configserver:http://localhost:8071/"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  # Expose all management endpoints
+  health:
+    readiness-state:
+      enabled: true  # Enable readiness state
+    liveness-state:
+      enabled: true  # Enable liveness state
+  endpoint:
+    shutdown:
+      enabled: true  # Enable shutdown endpoint
+    health:
+      probes:
+        enabled: true  # Enable health probes
+  info:
+    env:
+      enabled: true  # Enable environment info
+
+endpoints:
+  shutdown:
+    enabled: true  # Enable shutdown endpoint
+
+eureka:
+  instance:
+    preferIpAddress: true  # Prefer IP address for instance registration
+  client:
+    fetchRegistry: true  # Enable fetching the registry
+    registerWithEureka: true  # Enable registration with Eureka
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka/  # Eureka server URL
+
+info:
+  app:
+    name: "cards"
+    description: "Bank Cards Application"
+    version: "1.0.0"  # Application version
+
+logging:
+  level:
+    com:
+      eazybytes:
+        cards: DEBUG  # Set logging level for the cards package

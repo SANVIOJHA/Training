@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Beginner Course</title>
+  <link rel="stylesheet" href="../course.css">
+</head>
+<body>
+  <div class="layout">
+    <header class="hero course-header">
+      <a class="back-link" href="../index.html">Back to course home</a>
+      <p class="eyebrow">HTML Folder</p>
+      <h1>Learn HTML from Scratch</h1>
+      <p class="lead">
+        HTML stands for HyperText Markup Language. It is used to create the structure of a webpage. HTML does not focus on beauty or logic. Its main job is to describe what the content is.
+      </p>
+    </header>
+
+    <main class="chapter-list">
+      <section class="chapter">
+        <h2>Chapter 1: What HTML is and why we use it</h2>
+        <p>
+          HTML gives meaning and structure to a webpage. It tells the browser which text is a heading, which part is a paragraph, which part is an image, and which part is a button or form.
+        </p>
+        <div class="two-col">
+          <div>
+            <h3>Why HTML is important</h3>
+            <ul>
+              <li>Every webpage starts with HTML.</li>
+              <li>It creates the skeleton of the page.</li>
+              <li>CSS and JavaScript both depend on HTML.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Think of HTML like this</h3>
+            <ul>
+              <li>HTML = structure of a house</li>
+              <li>CSS = paint and decoration</li>
+              <li>JavaScript = electrical behavior and interactions</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 2: Basic HTML document structure</h2>
+        <p>
+          Every HTML page follows a basic structure. This is the first code you should memorize and understand.
+        </p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;My First Webpage&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello&lt;/h1&gt;
+  &lt;p&gt;Welcome to HTML.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <ul>
+          <li>`DOCTYPE` tells the browser to use HTML5.</li>
+          <li>`html` is the root element.</li>
+          <li>`head` contains page information.</li>
+          <li>`body` contains the visible content.</li>
+        </ul>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 3: Headings, paragraphs, and text tags</h2>
+        <p>
+          These are used for writing readable content on the page.
+        </p>
+        <pre><code>&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Subheading&lt;/h2&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;strong&gt;Important text&lt;/strong&gt;
+&lt;em&gt;Emphasized text&lt;/em&gt;</code></pre>
+        <div class="tip">
+          Use `h1` for the main title of the page. Use `h2`, `h3`, and others in proper order. Do not skip heading levels just for size.
+        </div>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 4: Links, images, and paths</h2>
+        <p>
+          Links help users move to another page or website. Images add visual information.
+        </p>
+        <pre><code>&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
+
+&lt;img src="images/profile.jpg" alt="Profile photo"&gt;</code></pre>
+        <ul>
+          <li>`href` tells the link where to go.</li>
+          <li>`src` tells the browser where the image is.</li>
+          <li>`alt` describes the image and is important for accessibility.</li>
+        </ul>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 5: Lists</h2>
+        <p>
+          Lists are used when content belongs together in a group.
+        </p>
+        <pre><code>&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Open editor&lt;/li&gt;
+  &lt;li&gt;Write code&lt;/li&gt;
+  &lt;li&gt;Run in browser&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        <ul>
+          <li>`ul` is unordered list.</li>
+          <li>`ol` is ordered list.</li>
+          <li>`li` is list item.</li>
+        </ul>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 6: Tables</h2>
+        <p>
+          Tables are only for tabular data such as marks, schedules, and price lists. Do not use tables for page layout.
+        </p>
+        <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Marks&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Riya&lt;/td&gt;
+    &lt;td&gt;92&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 7: Forms and input fields</h2>
+        <p>
+          Forms are used to collect user input like names, passwords, messages, and choices.
+        </p>
+        <pre><code>&lt;form&gt;
+  &lt;label for="name"&gt;Name&lt;/label&gt;
+  &lt;input id="name" type="text" placeholder="Enter your name"&gt;
+
+  &lt;label for="email"&gt;Email&lt;/label&gt;
+  &lt;input id="email" type="email"&gt;
+
+  &lt;label for="message"&gt;Message&lt;/label&gt;
+  &lt;textarea id="message"&gt;&lt;/textarea&gt;
+
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        <ul>
+          <li>Use `label` for every input.</li>
+          <li>Use `button` for actions.</li>
+          <li>Use `required` when the field must be filled.</li>
+        </ul>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 8: Semantic HTML</h2>
+        <p>
+          Semantic HTML means using meaningful tags instead of using `div` for everything.
+        </p>
+        <pre><code>&lt;header&gt;Website Title&lt;/header&gt;
+&lt;nav&gt;Menu links&lt;/nav&gt;
+&lt;main&gt;
+  &lt;section&gt;
+    &lt;article&gt;Blog post&lt;/article&gt;
+  &lt;/section&gt;
+&lt;/main&gt;
+&lt;footer&gt;Footer content&lt;/footer&gt;</code></pre>
+        <div class="tip">
+          Semantic HTML helps accessibility, code readability, and SEO.
+        </div>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 9: Inline vs block elements</h2>
+        <p>
+          Block elements usually start on a new line. Inline elements stay within the line.
+        </p>
+        <ul>
+          <li>Block examples: `div`, `p`, `h1`</li>
+          <li>Inline examples: `span`, `a`, `strong`</li>
+        </ul>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 10: HTML attributes</h2>
+        <p>
+          Attributes provide extra information to an element.
+        </p>
+        <pre><code>&lt;input type="text" id="username" class="field" placeholder="Enter username"&gt;</code></pre>
+        <ul>
+          <li>`id` is unique.</li>
+          <li>`class` is reusable.</li>
+          <li>`placeholder` shows hint text.</li>
+          <li>`type` tells what kind of input it is.</li>
+        </ul>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 11: Accessibility basics</h2>
+        <ul>
+          <li>Use labels for form fields.</li>
+          <li>Use meaningful button text.</li>
+          <li>Use alt text for images.</li>
+          <li>Use headings in proper order.</li>
+        </ul>
+      </section>
+
+      <section class="chapter">
+        <h2>Chapter 12: Practice project ideas for HTML</h2>
+        <ol>
+          <li>Create your profile page.</li>
+          <li>Create a recipe page.</li>
+          <li>Create a class timetable page.</li>
+          <li>Create a contact form page.</li>
+        </ol>
+        <div class="tip">
+          Goal before moving to CSS: you should be able to build a full page using headings, paragraphs, images, lists, links, and forms without copying everything.
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

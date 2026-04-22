@@ -1,0 +1,34 @@
+
+.container{
+    width: 100%;
+    height: 400px;
+    background-color: red;
+}
+
+@media(max-width: 767px){/*mobile --- 767px and more than that is tablet and desktop*/
+    .container{
+        background-color: blue; 
+    }
+}
+
+/*
+@media(max-height: 600px){  /*in case height and width is same then latest will be taken*/ /*in this case height media query will be applied
+    .container{
+        background-color: green;
+    }
+}
+*/
+
+
+@media(min-width:768px) and (max-width: 1023px){ /*tablet*/
+    .container{
+        background-color: rgb(182, 75, 157);
+    }
+}
+
+@media(min-width: 1024px){ /*desktop*/
+    .container{
+        background-color: rgb(75, 182, 157);
+    }
+}
+

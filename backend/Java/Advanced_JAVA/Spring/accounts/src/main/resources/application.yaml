@@ -1,0 +1,7 @@
+#spring.application.name=accounts
+server:
+  port: 8071
+
+spring:
+  application:
+    name: configserver

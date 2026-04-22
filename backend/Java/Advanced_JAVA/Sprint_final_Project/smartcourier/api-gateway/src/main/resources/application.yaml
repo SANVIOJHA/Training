@@ -1,0 +1,54 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+      routes:
+
+        # AUTH SERVICE
+        - id: auth-service
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/gateway/auth/**
+          filters:
+            - StripPrefix=1
+
+        #  DELIVERY SERVICE
+        - id: delivery-service
+          uri: lb://DELIVERY-SERVICE
+          predicates:
+            - Path=/gateway/deliveries/**
+          filters:
+            - StripPrefix=1
+
+        #  TRACKING SERVICE
+        - id: tracking-service
+          uri: lb://TRACKING-SERVICE
+          predicates:
+            - Path=/gateway/tracking/**
+          filters:
+            - StripPrefix=1
+
+        #  ADMIN SERVICE
+        - id: admin-service
+          uri: lb://ADMIN-SERVICE
+          predicates:
+            - Path=/gateway/admin/**
+          filters:
+            - StripPrefix=1
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    non-secure-port: 8080
+    instance-id: api-gateway:8080

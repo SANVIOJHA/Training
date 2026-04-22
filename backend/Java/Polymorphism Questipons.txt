@@ -1,0 +1,62 @@
+1. Employee Salary System
+
+Create a Java application for an organization where different employees have different salary calculations.
+Define a base class Employee with a method calculateSalary().
+Create subclasses like Developer, Manager, and Intern that override the method.
+Use runtime polymorphism to calculate salaries without knowing the employee type in advance.
+
+2. Payment Processing Application
+
+Design a payment system that supports multiple payment methods.
+Create an interface or abstract class Payment with a method pay().
+Implement this method in classes such as CreditCardPayment, DebitCardPayment, and UPIPayment.
+Demonstrate polymorphism by processing payments using a single reference type.
+
+3. Online Notification System
+
+Develop a notification system that sends alerts through different channels.
+Create a base class Notification with a method send().
+Extend it with classes like EmailNotification, SMSNotification, and PushNotification.
+Use polymorphism to send notifications dynamically based on user preference.
+
+4. Vehicle Rental System
+
+Create a Java program for a vehicle rental service.
+Define a base class Vehicle with a method calculateRent().
+Create subclasses Car, Bike, and Truck with different rent calculations.
+Use a base class reference to calculate rental charges for different vehicles.
+
+5. Banking Interest Calculator
+
+Design a banking system that calculates interest differently for various account types.
+Create a base class BankAccount with a method calculateInterest().
+Extend it into SavingsAccount, FixedDepositAccount, and CurrentAccount.
+Use runtime polymorphism to calculate interest.
+
+6. Media Player Application
+
+Create a media player that can play different types of media files.
+Define a base class MediaFile with a method play().
+Create subclasses such as AudioFile, VideoFile, and Podcast.
+Use polymorphism to play media files using a single reference.
+
+7. E-Commerce Discount System
+
+Design a Java program for an e-commerce platform where discounts vary by customer type.
+Create a base class Customer with a method calculateDiscount().
+Extend it with RegularCustomer, PremiumCustomer, and VIPCustomer.
+Use polymorphism to apply discounts dynamically.
+
+8. Restaurant Billing System
+
+Create a billing system for a restaurant.
+Define a base class MenuItem with a method calculatePrice().
+Create subclasses such as VegItem and NonVegItem that override the method.
+Use polymorphism to generate the final bill.
+
+9. Game Character Behavior
+
+Design a game where different characters attack differently.
+Create a base class Character with a method attack().
+Extend it into classes like Warrior, Archer, and Mage.
+Use polymorphism to perform attacks without knowing the character type.

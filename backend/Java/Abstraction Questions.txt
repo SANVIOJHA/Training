@@ -1,0 +1,51 @@
+1. A company is developing an online payment system that supports different payment methods such as Credit Card, UPI, and Net Banking.
+
+   Create an abstract class Payment
+   It should contain:
+       . an abstract method processPayment(double amount)
+       . a concrete method printReceipt()
+   Create subclasses CreditCardPayment, UPIPayment, and NetBankingPayment
+   Each subclass should implement the payment processing logic
+   Demonstrate abstraction by processing payments using a Payment reference
+
+2: Ride Booking Application
+
+  A ride booking app offers different ride types such as Bike, Auto, and Car.
+  Create an abstract class Ride
+  Include:
+   . abstract method calculateFare(int distance)
+   . concrete method rideDetails()
+  Create classes BikeRide, AutoRide, and CarRide
+  Each ride type calculates fare differently
+  Use abstraction to calculate fares dynamically
+
+3. Banking System
+
+  A bank provides different account types such as Savings Account and Current Account.
+  Create an abstract class BankAccount
+  Include:
+     . abstract method calculateInterest()
+     . concrete methods deposit() and withdraw()
+  Implement SavingsAccount and CurrentAccount
+  Demonstrate runtime polymorphism using abstraction
+
+4. Employee Management System
+
+  An organization has full-time and part-time employees.
+  Create an abstract class Employee
+  Include:
+     . abstract method calculateSalary()
+     . concrete method displayDetails()
+  Implement FullTimeEmployee and PartTimeEmployee
+  Salary calculation logic should differ for each employee type
+
+5. Food Delivery Application
+
+
+  A food delivery app supports multiple restaurants with different preparation times.
+  Create an abstract class Restaurant
+  Include:
+      . abstract method prepareFood()
+      . concrete method orderReceived()
+  Implement FastFoodRestaurant and FineDiningRestaurant
+  Demonstrate abstraction when preparing food orders

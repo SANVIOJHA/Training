@@ -1,0 +1,37 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: delivery-service
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/smartcourier_delivery_db
+    username: root
+    password: tiger
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  cloud:
+    inetutils:
+      ignored-interfaces:
+        - docker0
+        - veth.*
+        - br-.*
+      preferred-networks:
+        - 127.0.0.1
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+  instance:
+    hostname: localhost          #  FORCE HOSTNAME
+    prefer-ip-address: true      #  USE IP INSTEAD OF HOSTNAME
+    ip-address: 127.0.0.1        # FORCE LOOPBACK
+    non-secure-port: 8082        # CORRECT PORT
+    instance-id: delivery-service:8082  # CLEAN ID

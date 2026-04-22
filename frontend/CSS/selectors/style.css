@@ -1,0 +1,246 @@
+/* =========================
+   Tag selector for h1
+   ========================= */
+/* h1 {
+    color: rgb(2, 79, 245);
+
+    /* Base64 image used as background */
+    /* Useful when you don't want separate image file */
+   /* background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/...'); 
+} */
+
+
+/* selectors */
+/* simple selectors */
+/* id, class, tagname, grouping selector, universal selector */
+
+
+/* id selector ----- has more preference than class selector and tag name selector --*/
+/* #head3 {
+    color: red;
+    background-color: black;
+} */
+
+
+/* class selector ----- has more preference than tag name selector but less than id selector --*/
+/* .head {
+    color: rgb(14, 195, 14);
+    background-color: black;
+} */
+
+/* additional class selector */
+/* .heads {
+    color: purple;
+    font-size: large;
+} */
+
+
+/* tag name selector */
+/* h5 {
+    color: rgb(14, 195, 14);
+    background-color: black;
+} */
+
+
+/* grouping selector */
+/* applies same style to both h1 and p */
+/* h1, p {
+    color: rgb(14, 195, 14);
+    background-color: black;
+}
+
+
+/* universal selector */
+/* applies to all elements */
+/* {
+    background-color: thistle;
+} */
+
+
+/* combinator selector */ 
+/* descendant selector  ---- will target direct as well as indirect children */
+
+
+/* div p{
+    background-color: blue;
+    color: rgb(58, 239, 3);
+} */
+
+
+
+/* child selector  ------ direct children */
+ /* div>h2{
+    background-color: rgb(205, 9, 9);
+    color:yellow;
+ } */
+
+ /* adjsent selector  */
+ /* h2+p{
+    background-color: violet;
+    color:rgb(21, 20, 20)
+ } */
+
+/* general sibling selector  */
+ /* h2~p{
+    background-color: lightblue;
+    color:rgb(21, 20, 20)
+ }  */
+
+/* psuedo class selector */ 
+/* a:link{
+    color: springgreen;
+}
+
+a:visited{
+    color: red;
+}
+a:active{
+    color: deeppink;
+} */
+
+/* 
+input:focus{
+    background-color: rgb(6, 145, 192);
+    color: black;
+} 
+
+input:checked{
+    accent-color:brown;
+    color:aqua;
+}
+
+input:disabled{
+    background-color: rgb(6, 145, 192);
+    color: black;
+}    */
+
+/* psuedo element selector */
+/*h1::first-letter{
+    font-size:400px;
+    color: red;
+}
+
+p::first-line{
+    font-size: 30px;
+    color: blue;
+}
+
+h1::before{
+    content: " 🤣😊😊welcome  ";
+    color: green;
+}
+
+h1::after{
+    content: "  go 🤣😊😊 ";
+    color: green;
+}
+
+p::selection{
+    background-color: black;
+    color: white;
+}
+
+li::marker{
+    content: "😒";
+    font-size: 20px;
+
+}
+
+input::placeholder{
+    color: red;
+}
+
+
+div{
+    height: 400px;
+    width: 600px;
+    height: 100vh;
+    width:100vw;
+    background-color: rgb(6, 145, 192);
+    font-size: 40px;
+    
+} 
+
+main{
+    height: 100px;
+    width: 300px;
+    background-color: rgb(192, 177, 6);
+    font-size: 2em;
+    
+} */
+
+/* *{
+    background-color: red;
+} */
+
+/* body{
+    background-color: rgb(12, 192, 6);
+    height:100vh;
+    width:100vw;
+} */
+/* 
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}  */
+/* 
+button{
+    background-color: red;
+    border: 150px solid rgb(0, 0, 0);
+    margin: 50px;
+    padding: 89px;
+    font-size: xx-large;
+} */
+/* 
+
+article{
+    background-color: rgb(6, 192, 9);
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    /* padding: 50px;
+    font-size: x-large; 
+}
+ */
+
+/* h1{
+   color: white;
+    background-color: red;
+} */
+
+
+/* div{
+     height: 100px;
+     width: 100px;
+    background-color: aqua;
+    border-radius: 50%;
+   
+} */
+
+
+
+p::first-line{
+    font-size: 30px;
+    color: blue;
+}
+
+p::first-letter{
+    font-size: 50px;
+}
+h1::before{
+    content: " 🤣welcome  ";
+    color: green;
+}
+
+h1::after{
+    content: " 🤣😊  ";
+    color: green;
+}
+
+
+p::selection{
+    color:red;
+    background-color: aqua;
+
+}

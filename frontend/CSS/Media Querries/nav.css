@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+    /* background-color: antiquewhite; */
+
+}
+.logo{
+    cursor: pointer;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(75, 182, 157);
+    color: white;   
+    padding: 15px;
+
+}
+
+.menu{
+    display: flex;
+    gap: 15px;
+}
+
+.menu a{ /*visibility hidden will take space*/
+    text-decoration: none;
+    color: white;
+}
+
+.hamburger{
+    display: none;
+    font-size: 24px;    
+    
+  
+}
+
+#toggle{
+    display: none;  
+    
+}
+
+@media(max-width:767px){
+    
+    .menu{
+        display: none;
+        flex-direction: column;
+        background-color: saddlebrown;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width:100%;
+
+    }
+    #toggle:checked + .hamburger + .menu{
+        display: flex;
+    }
+    .hamburger{
+        display: block;
+        
+    }
+}
+
+@media(min-width:768px) and (max-width:1023px){
+    .navbar{
+        background-color: rgb(182, 75, 157);
+    }
+}

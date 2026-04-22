@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #cfe3dc;
+}
+
+/* Container center */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Form card */
+.contact-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 500px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Heading */
+.contact-form h1 {
+    margin-bottom: 20px;
+}
+
+/* Row for first & last name */
+.row {
+    display: flex;
+    gap: 15px;
+}
+
+/* Input group */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+}
+
+/* Inputs */
+input, textarea {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Radio group */
+.radio-group {
+    display: flex;
+    gap: 20px;
+    margin-top: 5px;
+}
+
+/* Checkbox */
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1c7c63;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #155d4b;
+}

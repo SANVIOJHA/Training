@@ -1,0 +1,75 @@
+1. Car and Engine
+
+Write a Java program where:
+A Car has an Engine
+Engine has attributes like engineType and horsePower
+Display car and engine details
+--> Demonstrate composition
+
+2. Library and Book
+
+Write a Java program where:
+A Library has multiple Book objects
+Book contains bookId, title, and author
+Display all books in the library
+--> Demonstrate aggregation
+
+3. Student and Address
+
+Write a Java program where:
+A Student has an Address
+Address contains city, state, and pincode
+Print complete student details
+
+4. Company and Employee
+
+Write a Java program where:
+A Company has Employee
+Employee has id, name, and salary
+Company displays employee details
+--> Use constructor to pass Employee object
+
+5. Mobile and SIM
+
+Write a Java program where:
+A Mobile has a SIM
+SIM contains network and number
+Mobile uses SIM details to make a call
+--> Show composition
+
+6. School and Teacher
+
+Write a Java program where:
+A School has many Teacher objects
+Teacher has name and subject
+Display all teachers of the school
+
+7. Bank and Account
+
+Write a Java program where:
+A Bank has Account
+Account has accountNumber and balance
+Bank shows account details
+--> Prevent direct access using encapsulation
+
+8. Computer and CPU
+
+Write a Java program where:
+A Computer has a CPU
+CPU has brand and speed
+Display computer specifications
+
+9. House and Room
+
+Write a Java program where:
+A House has multiple Room objects
+Room has roomType and area
+Print house and room details
+--> Demonstrate composition
+
+10. Person and Passport
+
+Write a Java program where:
+A Person has a Passport
+Passport contains passportNumber and nationality
+Display person and passport information

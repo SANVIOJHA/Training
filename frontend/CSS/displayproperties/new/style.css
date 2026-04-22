@@ -1,0 +1,24 @@
+.container{
+    /* padding: 20px; */
+    background-color: lightblue;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    gap: 20px;
+    align-items: center;/*vertically */
+    justify-content:center;/*horizontally */
+    align-content: center; /*center the items in the container when there are multiple lines of items*/
+    /* flex-direction: row-reverse;   ////  reverse the order of the items in the container */
+    /* flex-direction: column;  stack the items in the container vertically */
+    text-align: center;
+    flex-wrap:wrap;
+    
+
+}
+
+.boc{
+
+    background-color: lightcoral;
+    width: 100px;
+    height: 100px;
+}

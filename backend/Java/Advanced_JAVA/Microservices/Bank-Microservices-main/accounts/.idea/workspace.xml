@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c0b66ac3-ea6d-436c-9d36-980e1136deae" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/accounts/controller/AccountsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/accounts/controller/AccountsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Spring/libmanagement/src/main/java/com/library/libmanagement/LibmanagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Spring/libmanagement/src/main/java/com/library/libmanagement/LibmanagementApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Spring/libmanagement/src/main/java/com/library/libmanagement/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Spring/libmanagement/src/main/java/com/library/libmanagement/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Spring/libmanagement/src/main/java/com/library/libmanagement/dto/CustomerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Spring/libmanagement/src/main/java/com/library/libmanagement/dto/CustomerDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Spring/libmanagement/src/main/java/com/library/libmanagement/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Spring/libmanagement/src/main/java/com/library/libmanagement/entity/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Spring/libmanagement/src/main/java/com/library/libmanagement/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Spring/libmanagement/src/main/java/com/library/libmanagement/repository/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Spring/libmanagement/src/main/java/com/library/libmanagement/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Spring/libmanagement/src/main/java/com/library/libmanagement/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Spring/libmanagement/src/main/java/com/library/libmanagement/service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Spring/libmanagement/src/main/java/com/library/libmanagement/service/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Spring/libmanagement/src/main/java/com/library/libmanagement/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Spring/libmanagement/src/main/java/com/library/libmanagement/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Spring/libmanagement/src/main/java/com/library/libmanagement/service/impl/BookServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../hibernate.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../hibernate.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../questions/src/questions/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../questions/src/questions/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="3B3cR8A7NHuKhLjXH4rUxFrcvR5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/CAPGEMENI_JAVA_FULLSTACK/Advanced_JAVA/Microservices/Bank-Microservices-main/accounts",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c0b66ac3-ea6d-436c-9d36-980e1136deae" name="Changes" comment="" />
+      <created>1773721182905</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1773721182905</updated>
+    </task>
+    <servers />
+  </component>
+</project>

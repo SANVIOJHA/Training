@@ -1,0 +1,36 @@
+services:
+
+  accountdb:
+    image: mysql:8
+    container_name: account-db
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: AccountsDB
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks:
+      - banking
+
+  account:
+    image: aayushi2102/myimage:latest
+    container_name: account-ms
+    ports:
+      - "9192:9192"
+    depends_on:
+      accountdb:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://accountdb:3306/AccountsDB?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: tiger
+    networks:
+      - banking
+
+networks:
+  banking:
+    driver: bridge
