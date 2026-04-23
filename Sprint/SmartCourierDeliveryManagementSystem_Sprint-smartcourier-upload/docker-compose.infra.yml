@@ -1,0 +1,54 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: smartcourier-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: tiger
+    ports:
+      - "3306:3306"
+    volumes:
+      - smartcourier-mysql-data:/var/lib/mysql
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: smartcourier-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  zipkin:
+    image: openzipkin/zipkin:3.4
+    container_name: smartcourier-zipkin
+    ports:
+      - "9411:9411"
+
+  sonarqube-db:
+    image: postgres:16
+    container_name: smartcourier-sonarqube-db
+    environment:
+      POSTGRES_USER: sonar
+      POSTGRES_PASSWORD: sonar
+      POSTGRES_DB: sonarqube
+    volumes:
+      - smartcourier-sonar-db:/var/lib/postgresql/data
+
+  sonarqube:
+    image: sonarqube:lts-community
+    container_name: smartcourier-sonarqube
+    depends_on:
+      - sonarqube-db
+    environment:
+      SONAR_JDBC_URL: jdbc:postgresql://sonarqube-db:5432/sonarqube
+      SONAR_JDBC_USERNAME: sonar
+      SONAR_JDBC_PASSWORD: sonar
+    ports:
+      - "9000:9000"
+    volumes:
+      - smartcourier-sonar-data:/opt/sonarqube/data
+      - smartcourier-sonar-extensions:/opt/sonarqube/extensions
+
+volumes:
+  smartcourier-mysql-data:
+  smartcourier-sonar-db:
+  smartcourier-sonar-data:
+  smartcourier-sonar-extensions:
