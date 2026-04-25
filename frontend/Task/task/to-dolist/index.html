@@ -1,0 +1,50 @@
+<!-- //unordered list
+on entering list should be added and 
+onsubmit it should show list -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <fieldset>
+        <form id="form">
+            <div>
+                <input type="text" name="" id="list" placeholder="enter list"><br><br>
+                <input type="submit" action="action" value="Add">
+
+            </div>
+            <br><br>
+            <div> <input type="text" name="" id="del" placeholder="delete list"><br><br>
+
+                <input type="submit" action="action" value="Delete">
+            </div>
+
+        </form>
+    </fieldset>
+    <hr>
+    <br>
+    <div id="line">
+        <h2>Added List : <span id="display"></span></h2>
+        <ul id="addedList"></ul>
+    </div>
+    <div id="line1">
+        <h2>Deleted List : <span id="display1"></span></h2>
+        <ul id="deletedList"></ul>
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
