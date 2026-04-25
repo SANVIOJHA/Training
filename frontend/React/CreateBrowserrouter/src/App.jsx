@@ -1,13 +1,33 @@
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
 import Home from './pages/Home'
 import About from './pages/About'
+import Dashboard from './Dashboard'
+import Profile from './Profile'
+import Contact from './Contact'
 
-// router must be an ARRAY
+//  Correct router structure
 let router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />
+    element: <Home />,
+    children: [
+      {
+        path: 'dashboard',   // no "/"
+        element: <Dashboard />,
+        children: [
+          {
+            path: 'profile',
+            element: <Profile />
+          },
+          {
+            path: 'contact',
+            element: <Contact />
+          }
+        ]
+      }
+    ]
   },
   {
     path: '/about',
@@ -16,11 +36,7 @@ let router = createBrowserRouter([
 ])
 
 const App = () => {
-  return (
-    <div>
-      <RouterProvider router={router} />
-    </div>
-  )
+  return <RouterProvider router={router} />
 }
 
 export default App

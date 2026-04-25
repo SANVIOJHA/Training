@@ -1,20 +1,20 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
 
-const Home = () => {
+const Dashboard = () => {
   return (
     <div>
-      <h1>HomePage</h1>
+      <h2>Dashboard</h2>
 
       <nav>
         <button>
-          <Link to='/about'>About</Link>
+          <Link to='profile'>Profile</Link>
         </button>
 
         <br /><br />
 
         <button>
-          <Link to='/dashboard'>Dashboard</Link>
+          <Link to='contact'>Contact</Link>
         </button>
       </nav>
 
@@ -24,4 +24,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Dashboard
