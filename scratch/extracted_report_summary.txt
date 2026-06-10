@@ -1,0 +1,501 @@
+### D:\Final_Sprint\deliverables\SmartCourier_LPU_Internship_Report_Final.docx
+paragraphs=212 tables=15 sections=1
+
+P001 [Normal]: LOVELY PROFESSIONAL UNIVERSITY
+P002 [Normal]: PHAGWARA, PUNJAB
+P003 [Normal]: SMARTCOURIER DELIVERY MANAGEMENT SYSTEM
+P004 [Normal]: CAPGEMINI
+P005 [Normal]: A training report
+P006 [Normal]: Submitted in partial fulfillment of the requirements for the award of degree of
+P007 [Normal]: B.Tech Computer Science Engineering
+P008 [Normal]: Submitted to
+P009 [Normal]: LOVELY PROFESSIONAL UNIVERSITY
+P010 [Normal]: PHAGWARA, PUNJAB
+P011 [Normal]: From 18 December 2025 to 21 May 2026
+P013 [Heading 1]: Student Declaration
+P014 [Normal]: I hereby declare that this internship report titled SmartCourier Delivery Management System is an authentic record of the training project work carried out by me during the Java Full Stack Intern (Training Program) at Capgemini from 18 December 2025 to 21 May 2026. The work described in this report is based on learning activities, guided practice, implementation exercises, testing activities, source-code study, and project documentation completed during the training program.
+P015 [Normal]: I further declare that SmartCourier is a training project prepared for academic and learning purposes. It does not claim ownership of any confidential production client system. External technical references and documentation used while preparing the report are listed in the references section.
+P016 [Normal]: Date: ____________________
+Place: ____________________
+
+Signature of Student: ____________________
+P018 [Heading 1]: Declaration by Supervisors
+P019 [Normal]: This is to certify that the internship report titled SmartCourier Delivery Management System has been prepared by the student as part of the Java Full Stack training program. The report reflects the student's understanding of full stack development, microservices architecture, API design, database connectivity, messaging, security, testing, and professional documentation.
+P020 [Normal]: The work presented is suitable for academic evaluation as a training project and should be read in that context. The certificate is subject to verification and signature by the authorized faculty or industry supervisor.
+P021 [Normal]: Name of External Supervisor: ____________________        Name of Internal Supervisor: ____________________
+Designation: ____________________                         Designation: ____________________
+Signature: ____________________                           Signature: ____________________
+Date: ____________________                                Date: ____________________
+P023 [Heading 1]: Training Certificate
+P024 [Normal]: This page is reserved for attaching the official training certificate issued by Capgemini or the authorized training department. The certificate may include the student's name, registration number, training role, internship duration, technology track, supervisor details, and organization seal.
+P025 [Normal]: [Attach scanned certificate or official letter here before final physical submission.]
+P027 [Heading 1]: Acknowledgement
+P028 [Normal]: I express my sincere gratitude to Lovely Professional University for providing the academic framework and opportunity to undertake internship training as part of the B.Tech Computer Science Engineering curriculum. I am thankful to Capgemini for providing a professional learning environment where I could understand Java full stack development, software engineering practices, and project-style execution.
+P029 [Normal]: I also thank my mentors, trainers, faculty guides, peers, and team members who supported my learning. Their guidance helped me connect React, Spring Boot, REST APIs, microservices, MySQL, RabbitMQ, JWT security, testing, and debugging into one coherent project. The SmartCourier training project gave me a practical way to apply these concepts in a realistic courier-management domain.
+P031 [Heading 1]: Table of Contents
+P034 [Heading 1]: List of Figures
+P035 [Normal]: List of Figures
+P037 [Heading 1]: List of Tables
+P038 [Normal]: List of Tables
+P040 [Heading 1]: List of Abbreviations
+P041 [Normal]: List of Abbreviations
+P044 [Heading 1]: Chapter-1 Introduction of the Company
+P045 [Normal]: Capgemini is a global business and technology transformation partner that helps organizations use technology, data, cloud platforms, engineering practices, and digital systems to solve business problems. During my internship at Capgemini, I gained exposure to professional software engineering practices, full stack development concepts, collaborative delivery methods, and enterprise-style tools used by technology teams.
+P046 [Normal]: The organization traces its origin to 1967, when Serge Kampf founded Sogeti in Grenoble, France. Over time, Capgemini grew from a regional IT services firm into a multinational group through expansion, acquisitions, and the development of consulting, technology, outsourcing, and engineering capabilities. This background helped me understand how technology service companies adapt as client needs move from basic data processing to cloud platforms, cybersecurity, digital products, and AI-enabled transformation.
+P047 [Heading 2]: 1.1 Vision, Mission and Work Culture
+P048 [Normal]: Capgemini's public positioning focuses on using technology as a practical enabler of business transformation. In the training program, I connected this wider vision with everyday engineering habits: writing maintainable code, documenting API contracts, testing changes, following security practices, and communicating technical decisions clearly.
+P049 [Normal]: The work culture visible during training emphasized teamwork, regular feedback, process discipline, and continuous learning. These values influenced the way I approached SmartCourier. I treated the project not only as a coding assignment, but as a complete software system that needed clear responsibilities, understandable documentation, and verifiable behavior.
+P050 [Heading 2]: 1.2 Services and Departments
+P051 [Normal]: A technology services organization contains delivery teams, architecture groups, quality assurance teams, cloud and infrastructure teams, security functions, human resources, training departments, finance, sales, and client engagement functions. In the training environment, the most relevant groups for me were training coordination, mentors, technical trainers, peer groups, and evaluation support.
+P052 [Normal]: Table 1.1: Capgemini Service Areas
+P054 [Heading 2]: 1.3 Training Environment
+P055 [Normal]: My internship at Capgemini ran from 18 December 2025 to 21 May 2026. The training was structured around guided learning, hands-on implementation, peer discussion, mentor feedback, debugging, API testing, and project documentation. I worked primarily in the Java Full Stack track.
+P056 [Normal]: The tools and technologies practiced during the project included React for the frontend, Spring Boot and Spring Cloud for backend services, MySQL for persistence, RabbitMQ for messaging, Eureka for service discovery, OpenFeign for service-to-service calls, JWT for authentication, Postman for API testing, and Zipkin for tracing. Since SmartCourier was a training project, I do not present it as a live client delivery assignment. Its purpose was to demonstrate practical understanding through a realistic courier-management scenario.
+P058 [Normal]: Figure 1.1: Company Organization Structure in Training Context
+P060 [Heading 1]: Chapter-2 Introduction of the Project Undertaken
+P061 [Normal]: SmartCourier Delivery Management System is a web-based courier and parcel delivery training project. It models the workflow of registering users, booking deliveries, assigning and updating shipment status, tracking movement history, managing hubs, and viewing administrative reports. I built and studied the system to understand how a full stack application is designed when responsibilities are separated across frontend, gateway, backend services, databases, and message queues.
+P062 [Normal]: The original requirement document described an Angular frontend with Spring Boot microservices. During implementation, the frontend was developed as a React single page application using Vite, React Router, Context API, Axios, and Tailwind-style component conventions. I have documented this difference clearly because the implemented source code uses React while the architectural intention of protected routes, modular UI, and role-based pages remains the same.
+P063 [Heading 2]: 2.1 Problem Statement
+P064 [Normal]: Courier operations require accurate authentication, booking, pickup scheduling, shipment status updates, hub monitoring, exception handling, and tracking visibility. If these functions are handled manually or through tightly coupled modules, errors can occur in status visibility, reporting, traceability, and access control. SmartCourier addresses this as a training-level system by separating authentication, delivery, tracking, and administration into focused services.
+P065 [Heading 2]: 2.2 Objectives
+P066 [List Bullet]: Digitize the parcel booking and delivery lifecycle for a training courier-management workflow.
+P067 [List Bullet]: Provide separate customer and administrator flows with role-based access.
+P068 [List Bullet]: Implement REST APIs for authentication, delivery management, tracking, hub management, reports, and dashboard data.
+P069 [List Bullet]: Use JWT authentication so protected APIs can identify users and enforce roles.
+P070 [List Bullet]: Practice database-per-service design using MySQL and JPA/Hibernate.
+P071 [List Bullet]: Use RabbitMQ events to decouple delivery status updates from tracking history persistence.
+P072 [List Bullet]: Test APIs with Postman and backend tests, including success, validation, missing-token, unauthorized, and not-found scenarios.
+P073 [Heading 2]: 2.3 Scope and Boundaries
+P074 [Normal]: The implemented scope covers customer signup and login, delivery booking, customer delivery listing, tracking lookup, delivery status updates, admin dashboard, user and hub management, report APIs, service discovery, API Gateway routing, RabbitMQ-based tracking updates, and API testing. The project also includes diagrams, Postman collections, test-case documentation, and viva preparation notes.
+P075 [Normal]: The project does not include production deployment, real payment processing, live GPS devices, shipment label printing, courier partner API integration, or organization-specific client business rules. These boundaries were deliberate because the project was designed for academic evaluation and full stack training.
+P076 [Normal]: Table 2.1: User Roles and Responsibilities
+P078 [Normal]: Table 2.2: Functional Requirements
+P080 [Normal]: Table 2.3: Non-Functional Requirements
+P083 [Heading 1]: Chapter-3 Microservices Architecture and System Design
+P084 [Normal]: SmartCourier follows a microservices-based architecture. The React frontend communicates with the Spring Cloud API Gateway, and the gateway routes requests to individual services. Each service owns a specific domain and uses its own persistence boundary. Eureka provides service discovery, RabbitMQ supports asynchronous events, OpenFeign supports synchronous service-to-service calls, and Zipkin helps trace requests during debugging.
+P086 [Normal]: Figure 3.1: SmartCourier Microservices Architecture
+P087 [Normal]: Table 3.1: System Components and Responsibilities
+P089 [Heading 2]: 3.1 Request Flow
+P090 [List Number]: The user interacts with the React frontend, such as logging in, booking a parcel, viewing deliveries, or opening an admin page.
+P091 [List Number]: Axios sends the request to the gateway base URL, `http://localhost:8080/gateway`.
+P092 [List Number]: The gateway validates JWT information for protected routes and forwards requests to the target service.
+P093 [List Number]: Eureka allows the gateway and Feign clients to locate services by name instead of hardcoded service addresses.
+P094 [List Number]: The target service executes business logic through controller, service, repository, entity, DTO, mapper, and exception-handling layers.
+P095 [List Number]: When a delivery is created or its status changes, the Delivery Service publishes an event to RabbitMQ.
+P096 [List Number]: The Tracking Service consumes delivery status events and stores tracking history in its own database.
+P097 [List Number]: The Admin Service can fetch delivery data synchronously through OpenFeign to build dashboard summaries.
+P098 [Heading 2]: 3.2 Data Flow and Use Cases
+P099 [Normal]: The data flow separates user input, authentication, delivery processing, tracking updates, and report generation. The customer use cases focus on signup, login, booking, viewing personal deliveries, and tracking. The administrator use cases focus on delivery monitoring, user and hub management, report generation, and dashboard visibility.
+P101 [Normal]: Figure 3.2: SmartCourier Data Flow Diagram
+P103 [Normal]: Figure 3.3: SmartCourier Use Case Diagram
+P104 [Heading 2]: 3.3 Synchronous and Asynchronous Communication
+P105 [Normal]: Synchronous communication is used when a caller needs an immediate response. For example, the frontend waits for login results, delivery details, tracking results, and dashboard data. The Admin Service also uses OpenFeign to fetch delivery information from the Delivery Service as if calling a local method, while Eureka resolves the actual service instance.
+P106 [Normal]: Asynchronous communication is used when services should not block each other. The Delivery Service publishes events through RabbitMQ after booking creation or status updates. The Tracking Service listens to the configured queue and stores tracking records separately. This design makes tracking history available without making the Delivery Service directly responsible for tracking persistence.
+P108 [Normal]: Figure 3.4: Delivery Booking and Tracking Sequence
+P110 [Heading 1]: Chapter-4 Implementation Details
+P111 [Heading 2]: 4.1 Technology Choices
+P112 [Normal]: Table 4.1: Technology Stack and Rationale
+P114 [Heading 2]: 4.2 Frontend Implementation
+P115 [Normal]: The frontend is implemented as a React single page application. Routing is centralized in `AppRoutes.jsx`, where public routes are defined for the landing page, about page, login, and signup. Customer routes such as `/customer/dashboard`, `/customer/deliveries/new`, and `/customer/track/:trackingNumber` are protected with the `CUSTOMER` role. Admin routes such as `/admin/dashboard`, `/admin/deliveries`, `/admin/users`, and `/admin/hubs` are protected with the `ADMIN` role.
+P116 [Normal]: Authentication state is handled through `AuthContext`. The context keeps the logged-in user state and provides login, logout, and authentication-check behavior to components such as navigation, public routes, and protected routes. This avoids prop drilling and makes the security state available wherever it is needed.
+P117 [Normal]: API integration is handled through an Axios instance configured with the gateway base URL. The interceptor attaches the JWT token to outgoing requests and redirects users back to login when authorization fails. This keeps token handling centralized instead of repeating header logic inside every page.
+P118 [Heading 2]: 4.3 Backend Implementation
+P119 [Normal]: The backend is divided into services. Each service follows a layered Spring Boot structure: controller classes expose REST endpoints, service classes contain business logic, repository interfaces handle database access, entities map to database tables, DTOs shape request and response payloads, and exception handlers return consistent error responses.
+P120 [Normal]: The Auth Service implements signup, login, refresh, token validation, current-user lookup, role lookup, user listing, user update, role update, deletion, and logout. The `User` entity stores username, email, phone number, encrypted password, role, active status, created timestamp, and updated timestamp.
+P121 [Normal]: The Delivery Service is the main business service. It stores delivery records with tracking number, customer username, sender and receiver details, source, destination, status, assigned agent, current hub, price, weight, and timestamps. It also manages hubs with name, code, city, state, address, contact number, and audit timestamps. Pricing is implemented through a Strategy Pattern, where a `PricingStrategyFactory` selects standard or express pricing logic based on delivery characteristics.
+P122 [Normal]: The Tracking Service stores tracking events with delivery id, status, location, description, and timestamp. It exposes APIs for creating tracking events, retrieving all events for a delivery, latest status, status/location filters, date-range filtering, counts, existence checks, deletion, and health checks. It also consumes RabbitMQ messages so delivery status changes become tracking history.
+P123 [Normal]: The Admin Service manages reports and dashboard-related operations. Reports contain report type, report date, from/to range, report data, and generated-by information. The service exposes report CRUD, filtering, count, latest report, type summaries, dashboard, delivery monitoring, and admin delivery status update APIs.
+P124 [Heading 2]: 4.4 Database Design
+P125 [Normal]: SmartCourier follows database-per-service ownership. Auth data is owned by the Auth Service, delivery and hub data by the Delivery Service, tracking history by the Tracking Service, and report data by the Admin Service. This prevents one service from directly modifying another service's tables and keeps domain boundaries clear.
+P127 [Normal]: Figure 4.1: SmartCourier Entity Relationship Diagram
+P128 [Heading 2]: 4.5 API Design
+P129 [Normal]: The APIs are grouped by service and exposed through the gateway under `/gateway`. Direct service URLs are also useful during debugging: Auth runs on port 8081, Delivery on 8082, Tracking on 8083, Admin on 8084, and the gateway on 8080. The test documentation identifies 62 implemented endpoints across the four business services.
+P130 [Normal]: Table 4.2: Core API Endpoint Summary
+P132 [Heading 2]: 4.6 Security Implementation
+P133 [Normal]: Security is implemented through JWT-based authentication. After a successful login, the Auth Service returns a token. The frontend stores the token and sends it in the `Authorization: Bearer <token>` header for protected API calls. The API Gateway validates the token before forwarding secured requests. Role-based logic is applied in protected frontend routes and backend access checks.
+P134 [Normal]: For downstream services, the gateway can propagate identity details through headers such as the user name or role. The Delivery Service uses customer identity to return only the current user's deliveries through `/deliveries/my` and related endpoints. This avoids relying on user-submitted customer identifiers for protected customer data.
+P136 [Heading 1]: Chapter-5 Work Done During Training
+P137 [Normal]: During the internship, I worked through the project as an end-to-end learning exercise. I studied the requirement document, understood the courier domain, set up the frontend and backend, connected services through gateway routes, practiced database persistence, implemented and tested APIs, and prepared documentation for evaluation.
+P138 [Normal]: Table 5.1: Training Activities and Learning Outcomes
+P140 [Heading 2]: 5.1 Delivery Service Deep Dive
+P141 [Normal]: The Delivery Service was the most important module because it holds the core courier workflow. A booking request enters through the controller, is validated through DTO constraints, passes into the service layer, calculates pricing through the pricing strategy, saves the record through JPA, and publishes an event for tracking. This module helped me understand how business logic, validation, persistence, and messaging fit together.
+P142 [Normal]: Important decisions in this module include using an enum for delivery status instead of a free-form string, generating a unique tracking number, storing the authenticated customer username, linking the current hub through a JPA relationship, and using `@Transactional` service methods so related changes either complete together or fail safely.
+P143 [Heading 2]: 5.2 Challenges Faced and Solutions Implemented
+P144 [List Bullet]: Challenge: Understanding request flow across frontend, gateway, services, database, and queue. Solution: traced one workflow at a time from UI action to API, service method, database record, RabbitMQ message, and tracking result.
+P145 [List Bullet]: Challenge: Handling the React-versus-Angular difference between the specification and implementation. Solution: preserved the original requirement intent while documenting the actual React implementation accurately.
+P146 [List Bullet]: Challenge: Debugging protected requests. Solution: checked token creation, browser storage, Axios headers, gateway validation, role checks, and downstream service headers in sequence.
+P147 [List Bullet]: Challenge: Avoiding tightly coupled services. Solution: used RabbitMQ for status events and OpenFeign only where immediate dashboard data was required.
+P148 [List Bullet]: Challenge: Validating APIs beyond happy paths. Solution: created Postman and test-case coverage for missing tokens, invalid bodies, invalid ids, duplicate users, unauthorized roles, and unavailable downstream services.
+P149 [List Bullet]: Challenge: Explaining microservices clearly for viva. Solution: prepared architecture diagrams, walkthrough notes, endpoint summaries, and module-level explanations.
+P150 [Heading 2]: 5.3 Weekly Learning Summary
+P151 [Normal]: Table 5.2: Weekly Learning Summary
+P154 [Heading 1]: Chapter-6 Testing and Quality Assurance
+P155 [Normal]: Testing focused on verifying individual services, API contracts, secured request behavior, and cross-service workflows. Since SmartCourier is a training project, I used a practical combination of automated backend tests, controller tests, Postman collections, validation checks, and manual UI workflow verification.
+P156 [Heading 2]: 6.1 Testing Strategy
+P157 [Normal]: Unit tests were used for service-layer behavior where dependencies could be mocked. Mockito helped isolate logic that depended on repositories, mappers, pricing strategies, RabbitMQ publishers, or Feign clients. Controller tests checked whether REST endpoints accepted input and returned expected HTTP responses.
+P158 [Normal]: Postman testing was used for integrated API verification. The collection uses the gateway base URL and variables for access token, refresh token, usernames, password, phone number, delivery id, tracking number, hub id, report id, and assigned agent. Login and refresh flows can save tokens for later protected requests.
+P159 [Normal]: Integration-focused checks covered Auth plus Gateway, Delivery plus RabbitMQ plus Tracking, Admin plus Feign plus Delivery, Eureka registration, Config Server access, and Zipkin traces. These checks helped me understand failures that can happen because of configuration, service discovery, message queues, token headers, or database state.
+P160 [Normal]: Table 6.1: Sample Test Cases and Results
+P162 [Heading 2]: 6.2 Evaluation Demo Flow
+P163 [List Number]: Show Eureka with gateway, config server, and business services running.
+P164 [List Number]: Open Config Server URL to confirm service configuration is available.
+P165 [List Number]: Sign up or log in through the Auth API.
+P166 [List Number]: Use the returned JWT on gateway delivery APIs.
+P167 [List Number]: Create a delivery and note the tracking number.
+P168 [List Number]: Update delivery status and observe RabbitMQ queue activity.
+P169 [List Number]: Fetch tracking history to confirm the event was stored.
+P170 [List Number]: Open the admin dashboard to verify dashboard counts.
+P171 [List Number]: Show Zipkin traces for a gateway request and downstream service call.
+P172 [List Number]: Show Swagger or Postman requests for selected services.
+P173 [Heading 2]: 6.3 Results Achieved
+P174 [Normal]: The final training implementation demonstrates a working full stack courier-management flow. Customers can authenticate, book deliveries, view their deliveries, and track status. Administrators can access protected management views and dashboard/report APIs. The backend demonstrates 62 service endpoints across Auth, Delivery, Tracking, and Admin services. RabbitMQ-based events update tracking records, while OpenFeign supports administrative aggregation.
+P175 [Normal]: The project also produced supporting artifacts: architecture diagrams, ER diagram, sequence diagram, data-flow diagram, use-case diagram, Postman collection, test-case documentation, viva question bank, technical concept explanations, and project walkthrough notes. These outputs made the project easier to evaluate and explain.
+P177 [Heading 1]: Chapter-7 Conclusion and Future Scope
+P178 [Normal]: My internship training helped me connect academic knowledge with practical full stack software development. Through SmartCourier, I understood how a courier-management system can be divided into clear responsibilities: the frontend handles user workflows, the gateway handles routing and token checks, each service owns its domain logic, repositories manage persistence, and messaging supports asynchronous updates.
+P179 [Normal]: The project improved my confidence in React, Spring Boot, REST APIs, JWT security, MySQL, JPA/Hibernate, RabbitMQ, Eureka, OpenFeign, Postman, Zipkin, and unit testing concepts. More importantly, it helped me explain request flow, justify architectural choices, test APIs systematically, and debug integration issues across multiple layers.
+P180 [Heading 2]: 7.1 Key Learnings
+P181 [List Bullet]: A full stack feature must be understood from the user interface through the gateway, service, database, and response.
+P182 [List Bullet]: JWT security is not only a login feature; it affects routing, API headers, role checks, protected screens, and error handling.
+P183 [List Bullet]: Microservices improve separation of responsibilities but introduce configuration, discovery, messaging, and debugging complexity.
+P184 [List Bullet]: RabbitMQ is useful when one service needs to notify another without waiting for that service to complete work immediately.
+P185 [List Bullet]: Testing must include success cases, invalid input, missing authorization, role restrictions, not-found records, and service integration scenarios.
+P186 [List Bullet]: Good documentation makes technical work easier to evaluate, maintain, and explain in viva.
+P187 [Heading 2]: 7.2 Future Scope
+P188 [Normal]: Table 7.1: Future Enhancements
+P190 [Heading 2]: 7.3 Final Conclusion
+P191 [Normal]: SmartCourier remained within the scope of an academic and training project, but it successfully modeled realistic logistics workflows and modern application design patterns. The project demonstrates how authentication, delivery booking, tracking, administration, database design, microservices communication, security, testing, and documentation can be combined into one coherent system. It has strengthened my ability to build, analyze, and explain enterprise-style full stack applications.
+P193 [Heading 1]: References
+P194 [List Number]: Capgemini. About us. https://www.capgemini.com/us-en/about-us/
+P195 [List Number]: Capgemini. What we do: services and solutions. https://www.capgemini.com/us-en/about-us/who-we-are/what-we-do/
+P196 [List Number]: Capgemini. Who we are. https://www.capgemini.com/gb-en/about-us/who-we-are/
+P197 [List Number]: Spring Boot Reference Documentation. https://docs.spring.io/spring-boot/docs/current/reference/html/
+P198 [List Number]: Spring Framework Documentation. https://docs.spring.io/spring-framework/reference/
+P199 [List Number]: Spring Cloud Gateway Documentation. https://docs.spring.io/spring-cloud-gateway/reference/
+P200 [List Number]: Spring Cloud Netflix Eureka Documentation. https://docs.spring.io/spring-cloud-netflix/reference/
+P201 [List Number]: Spring Data JPA Documentation. https://docs.spring.io/spring-data/jpa/reference/
+P202 [List Number]: React Documentation. https://react.dev/
+P203 [List Number]: React Router Documentation. https://reactrouter.com/
+P204 [List Number]: Axios Documentation. https://axios-http.com/docs/intro
+P205 [List Number]: Oracle Java Documentation. https://docs.oracle.com/en/java/
+P206 [List Number]: RabbitMQ Documentation. https://www.rabbitmq.com/docs
+P207 [List Number]: MySQL Documentation. https://dev.mysql.com/doc/
+P208 [List Number]: JSON Web Token Introduction. https://jwt.io/introduction
+P209 [List Number]: OpenAPI Specification. https://spec.openapis.org/oas/latest.html
+P210 [List Number]: Postman Learning Center. https://learning.postman.com/docs/
+P211 [List Number]: Hibernate ORM Documentation. https://hibernate.org/orm/documentation/
+
+TABLE 1
+SUBMITTED BY | SUBMITTED TO
+Name of student: ____________________ | Name of Supervisor: ____________________
+Registration Number: ____________________ / Signature of the student: ____________________ | Designation: ____________________ / Signature: ____________________
+
+TABLE 2
+Figure No. | Title
+Figure 1.1 | Company Organization Structure in Training Context
+Figure 3.1 | SmartCourier Microservices Architecture
+Figure 3.2 | SmartCourier Data Flow Diagram
+Figure 3.3 | SmartCourier Use Case Diagram
+Figure 3.4 | Delivery Booking and Tracking Sequence
+Figure 4.1 | SmartCourier Entity Relationship Diagram
+
+TABLE 3
+Table No. | Title
+Table 1.1 | Capgemini Service Areas
+Table 2.1 | User Roles and Responsibilities
+Table 2.2 | Functional Requirements
+Table 2.3 | Non-Functional Requirements
+Table 3.1 | System Components and Responsibilities
+Table 4.1 | Technology Stack and Rationale
+Table 4.2 | Core API Endpoint Summary
+Table 5.1 | Training Activities and Learning Outcomes
+Table 5.2 | Weekly Learning Summary
+Table 6.1 | Sample Test Cases and Results
+Table 7.1 | Future Enhancements
+
+TABLE 4
+Abbreviation | Full Form
+API | Application Programming Interface
+DTO | Data Transfer Object
+DFD | Data Flow Diagram
+ER | Entity Relationship
+HTTP | Hypertext Transfer Protocol
+JPA | Java Persistence API
+JWT | JSON Web Token
+LPU | Lovely Professional University
+OJT | On-the-Job Training
+REST | Representational State Transfer
+SPA | Single Page Application
+UI | User Interface
+
+TABLE 5
+Area | Description
+Consulting | Business and technology advisory support for transformation programs.
+Application Development | Design, development, modernization, and maintenance of software systems.
+Cloud and Data | Cloud migration, data platforms, analytics, AI-enabled solutions, and managed services.
+Engineering | Product engineering, intelligent industry, digital manufacturing, and platform engineering.
+Cybersecurity | Security assessment, identity management, threat monitoring, and secure architecture practices.
+
+TABLE 6
+Role | Responsibilities
+Customer | Register, log in, book delivery, view personal deliveries, track shipment status, and receive role-protected access to customer pages.
+Administrator | View dashboard, manage deliveries, manage users, manage hubs, resolve delivery issues conceptually, and generate reports.
+Delivery Agent (Extended Scope) | Receive assigned deliveries and update shipment status in a future extension.
+Trainer/Evaluator | Review implementation, test APIs, inspect architecture, and evaluate project understanding.
+
+TABLE 7
+ID | Requirement | Module
+FR-01 | User registration, login, refresh, validation, logout, and role lookup. | Auth
+FR-02 | Create delivery with sender, receiver, source, destination, package weight, price, hub, and tracking details. | Delivery
+FR-03 | Assign delivery to an agent, cancel, ship, deliver, and update status. | Delivery
+FR-04 | Publish delivery status events and store tracking history. | Delivery/Tracking
+FR-05 | Fetch deliveries by customer, id, tracking number, status, agent, price threshold, and search parameters. | Delivery
+FR-06 | Manage logistics hubs with create, update, delete, and list operations. | Delivery
+FR-07 | Create, update, list, filter, count, and summarize reports. | Admin
+FR-08 | Show admin dashboard counts using service-to-service communication. | Admin
+
+TABLE 8
+Attribute | Expected Behavior
+Security | JWT-protected APIs and role-aware frontend routes restrict access.
+Maintainability | Code is organized into controller, service, repository, DTO, entity, exception, and configuration layers.
+Scalability | Microservices can be developed and scaled independently in the architecture model.
+Reliability | RabbitMQ supports event-driven tracking updates and reduces direct coupling.
+Usability | Frontend workflows guide users through login, booking, tracking, dashboard, and management pages.
+Observability | Eureka and Zipkin support service visibility and request tracing during local evaluation.
+
+TABLE 9
+Component | Responsibility | Learning Outcome
+React Frontend | SPA screens, forms, protected routes, dashboards, and Axios API calls. | Component design and user flow.
+API Gateway | Single external entry point for /gateway paths, token validation, and routing. | Centralized security and routing.
+Eureka Server | Registers services and allows lookup by logical service name. | Dynamic service discovery.
+Config Server | Centralizes configuration for services during local setup. | Configuration management.
+Auth Service | Registration, login, JWT creation, user APIs, role lookup, validation, and logout. | Security and identity.
+Delivery Service | Booking, pricing, hub management, assignment, status changes, and delivery search. | Core domain logic.
+Tracking Service | Tracking events, latest status, range queries, counts, and event consumption. | Event-driven state history.
+Admin Service | Reports, dashboard aggregation, delivery monitoring, and admin status updates. | Service aggregation and reports.
+RabbitMQ | Message exchange and queues for delivery and user events. | Asynchronous communication.
+MySQL | Relational storage for each service schema. | Persistence and JPA mapping.
+Zipkin | Distributed tracing across gateway and services. | Debugging request paths.
+
+TABLE 10
+Layer | Technology | Reason for Selection
+Frontend | React, Vite, React Router, Context API, Axios | Fast SPA development, component-based UI, protected routing, global auth state, and HTTP integration.
+Styling/UI | CSS/Tailwind-style utility conventions and reusable components | Consistent layout for landing, auth, customer, admin, and tracking pages.
+Backend | Java 17+, Spring Boot 3.x, Spring Cloud | Rapid REST API development and support for gateway, discovery, Feign, security, and messaging.
+Security | Spring Security, JWT | Stateless authentication and role-aware access across APIs and frontend routes.
+Persistence | MySQL, JPA/Hibernate | Relational modeling, repository pattern, transactions, and entity mapping.
+Messaging | RabbitMQ | Decouples delivery status changes from tracking persistence.
+Service Discovery | Netflix Eureka | Allows services and gateway to use logical service names.
+Observability | Zipkin/Micrometer tracing | Helps inspect request flow across multiple services.
+Testing | JUnit, Mockito, MockMvc, Postman | Supports unit, controller, integration, and manual API validation.
+
+TABLE 11
+Service | Endpoint Group | Purpose
+Auth | `POST /auth/signup`, `POST /auth/login`, `POST /auth/refresh` | Registration, login, and token refresh.
+Auth | `GET /auth/validate`, `/role`, `/me`, `/users/*` | Token validation, current user, role lookup, and user management.
+Delivery | `GET /deliveries/my`, `POST /deliveries`, `GET /deliveries/{id}` | Customer delivery listing, booking, and detail retrieval.
+Delivery | `PUT /deliveries/{id}/status`, `/assign`, `/cancel`, `/ship`, `/deliver` | Lifecycle and assignment operations.
+Delivery | `GET /deliveries/tracking/{trackingNumber}`, `/summary/status`, `/search` | Tracking lookup, status summaries, and filtering.
+Delivery | `/deliveries/hubs` | Hub create, update, delete, detail, and list operations.
+Tracking | `POST /tracking`, `GET /tracking/{deliveryId}`, `/latest`, `/range` | Tracking event creation and retrieval.
+Tracking | `/status/{status}`, `/location/{location}`, `/count`, `/exists` | Tracking filters and status checks.
+Admin | `/admin/reports`, `/admin/reports/latest`, `/summary/type` | Report management and summaries.
+Admin | `/admin/dashboard`, `/admin/deliveries`, `/admin/deliveries/{id}/status` | Dashboard, delivery monitoring, and admin status updates.
+
+TABLE 12
+Activity | Work Performed | Learning Outcome
+Orientation | Understood training objectives, tools, project expectations, and the full stack roadmap. | Prepared environment and learning notes.
+React Practice | Worked on pages, forms, routing, protected routes, dashboards, and reusable components. | Improved UI component and workflow understanding.
+Spring Boot Practice | Created controllers, services, repositories, DTOs, entities, exception handlers, and configuration classes. | Understood layered backend design.
+Database Connectivity | Configured MySQL, JPA entities, repositories, and service-level persistence. | Practiced schema design and repository pattern.
+Authentication | Implemented and tested signup, login, JWT token usage, protected APIs, and role checks. | Understood stateless security workflow.
+RabbitMQ | Published delivery status events and consumed tracking updates. | Learned asynchronous service communication.
+Testing | Used Postman, unit tests, controller tests, validation checks, and integration checklists. | Improved debugging and QA discipline.
+Documentation | Prepared report, architecture notes, viva question bank, walkthrough, and test-case documentation. | Improved technical communication.
+
+TABLE 13
+Week | Learning Focus | Work Summary
+Week 1 | Java refresh and OOP | Practiced core Java concepts and prepared for backend work.
+Week 2 | Spring Boot basics | Created basic REST controllers and understood application structure.
+Week 3 | REST API practice | Worked with HTTP methods, JSON payloads, status codes, and Postman.
+Week 4 | React components | Built and reviewed reusable UI components.
+Week 5 | Routing and Context API | Implemented protected routes and global authentication state.
+Week 6 | MySQL and JPA | Mapped entities, repositories, and database operations.
+Week 7 | JWT security | Studied login, token generation, token validation, and role checks.
+Week 8 | Microservices and Eureka | Registered services and understood discovery flow.
+Week 9 | RabbitMQ messaging | Published and consumed events for tracking updates.
+Week 10 | OpenFeign and admin dashboard | Practiced service-to-service communication and fallback thinking.
+Week 11 | Postman testing | Prepared API requests for integrated testing.
+Week 12 | Debugging and exception handling | Handled validation and not-found scenarios more consistently.
+Week 13 | Frontend integration | Connected UI flows with gateway APIs.
+Week 14 | Unit testing | Practiced JUnit, Mockito, and controller tests.
+Week 15 | Documentation | Created report sections and architecture notes.
+Week 16 | Viva preparation | Prepared question bank and walkthrough material.
+Week 17 | Final review | Reviewed source, APIs, diagrams, and testing evidence.
+Week 18 | Future scope study | Documented cloud, GPS, notifications, and route optimization improvements.
+Week 19 | Report drafting | Organized chapters, tables, figures, and references.
+Week 20 | Submission readiness | Reviewed formatting, grammar, duplication, and evaluator flow.
+
+TABLE 14
+ID | Scenario | Expected Result | Status
+TC-01 | Signup with valid username, phone number, and password. | User registered successfully. | Pass
+TC-02 | Login with valid credentials. | JWT access token returned. | Pass
+TC-03 | Access protected delivery API without token. | 401 Unauthorized. | Pass
+TC-04 | Create delivery with valid request. | Delivery created with `CREATED` status and tracking number. | Pass
+TC-05 | Update delivery status to `SHIPPED`. | Status updated and RabbitMQ event published. | Pass
+TC-06 | Consume delivery status event. | Tracking event stored by Tracking Service. | Pass
+TC-07 | Customer opens admin route. | 403 Forbidden or frontend redirect. | Pass
+TC-08 | Admin dashboard fetches counts. | Dashboard values returned or safe fallback shown. | Pass
+TC-09 | Invalid delivery id lookup. | 404 Not Found or handled error response. | Pass
+TC-10 | Eureka dashboard after startup. | Services shown as UP. | Pass
+
+TABLE 15
+Enhancement | Description
+AI-Based Route Optimization | Recommend efficient routes using distance, delivery priority, hub capacity, traffic data, and historical patterns.
+Real-Time GPS Tracking | Show live parcel or delivery-agent location using map integration and privacy-aware location updates.
+Payment Integration | Support online payment, invoices, refunds, and secure transaction records.
+Notification System | Send email, SMS, or push notifications for booking confirmation, status changes, delays, and delivery proof.
+Shipment Labels and Documents | Generate labels, invoices, proof-of-delivery documents, and upload supporting files.
+Cloud Deployment | Containerize services and deploy with managed databases, broker, secrets management, logging, and monitoring.
+CI/CD and Quality Gates | Automate build, test, code quality checks, and deployment pipelines.
+Centralized Logging and Metrics | Add dashboards for service health, latency, error rates, queue depth, and trace analysis.
+API Rate Limiting | Protect public endpoints from abuse and improve gateway-level security.
+
+
+### D:\Viva_etp\SmartCourier_Viva_Preparation_Pack.docx
+paragraphs=133 tables=0 sections=1
+
+P000 [Heading 1]: SmartCourier Viva Preparation Pack
+P001 [Normal]: This companion document contains a 5-minute viva script, 50 viva questions and answers, a one-page revision sheet, and frequently asked technical questions for the SmartCourier Delivery Management System training project.
+P002 [Heading 1]: 5-Minute Viva Script
+P003 [Normal]: Good morning/afternoon respected evaluators. My internship training project is titled SmartCourier Delivery Management System. It was developed as a Java Full Stack training project during my Capgemini training program from 18 December 2025 to 21 May 2026.
+P004 [Normal]: The purpose of the project was to understand how a courier management workflow can be implemented using a modern full stack architecture. The project is not a production client system; it is a realistic training implementation used to practice React, Spring Boot, REST APIs, microservices, MySQL, RabbitMQ, JWT, and testing.
+P005 [Normal]: The frontend is built with React and Vite. It includes public routes for landing, login, and signup, plus protected customer and admin routes. Authentication state is stored through Context API, and Axios is used to call backend APIs through the API Gateway.
+P006 [Normal]: The backend is divided into multiple services. The Auth Service handles signup, login, users, roles, and JWT generation. The Delivery Service handles courier booking, delivery status, hubs, and delivery workflows. The Tracking Service stores tracking events. The Admin Service supports reporting and dashboard summaries. The API Gateway is the single entry point, and Eureka provides service discovery.
+P007 [Normal]: RabbitMQ is used for asynchronous communication. When delivery status changes, Delivery Service publishes an event, and Tracking Service consumes that event to create tracking history. This helped me understand eventual consistency and loose coupling.
+P008 [Normal]: During training, I practiced API testing with Postman, studied unit and controller tests, debugged validation and integration errors, and documented the architecture. The project improved my confidence in Java full stack development and helped me understand how enterprise-style applications are structured.
+P009 [Normal]: Future scope includes AI-based route optimization, real-time GPS tracking, cloud deployment, payment integration, and CI/CD automation. Thank you.
+P010 [Heading 1]: 50 Viva Questions and Answers
+P011 [Normal]: Q1. What is the title of your project?
+P012 [Normal]: Answer: The project title is SmartCourier Delivery Management System.
+P013 [Normal]: Q2. Was this a production project?
+P014 [Normal]: Answer: No. It was a training project created to practice Java full stack and microservices concepts.
+P015 [Normal]: Q3. What was your internship role?
+P016 [Normal]: Answer: Java Full Stack Intern under a training program.
+P017 [Normal]: Q4. Which frontend library did you use?
+P018 [Normal]: Answer: React with Vite was used for the single page frontend application.
+P019 [Normal]: Q5. Why did you use React?
+P020 [Normal]: Answer: React supports reusable components, fast UI updates, hooks, routing, and maintainable frontend structure.
+P021 [Normal]: Q6. What is Context API?
+P022 [Normal]: Answer: Context API provides shared state such as authenticated user and token without prop drilling.
+P023 [Normal]: Q7. What is a protected route?
+P024 [Normal]: Answer: A protected route checks whether the user is authenticated and has the required role before rendering a page.
+P025 [Normal]: Q8. What is Axios used for?
+P026 [Normal]: Answer: Axios is used to call backend REST APIs from the frontend.
+P027 [Normal]: Q9. Which backend framework did you use?
+P028 [Normal]: Answer: Spring Boot was used to build REST APIs and microservices.
+P029 [Normal]: Q10. What is a REST API?
+P030 [Normal]: Answer: A REST API exposes resources through HTTP methods such as GET, POST, PUT, and DELETE.
+P031 [Normal]: Q11. What is the role of API Gateway?
+P032 [Normal]: Answer: It provides a single entry point, routes requests, and performs JWT validation.
+P033 [Normal]: Q12. What is Eureka?
+P034 [Normal]: Answer: Eureka is a service discovery server where microservices register and discover each other.
+P035 [Normal]: Q13. Why use RabbitMQ?
+P036 [Normal]: Answer: RabbitMQ supports asynchronous communication and decouples delivery status updates from tracking persistence.
+P037 [Normal]: Q14. What is JWT?
+P038 [Normal]: Answer: JWT is a signed token format used for stateless authentication and role-based authorization.
+P039 [Normal]: Q15. What is database-per-service?
+P040 [Normal]: Answer: Each microservice owns its own database schema to reduce coupling.
+P041 [Normal]: Q16. Which database did you use?
+P042 [Normal]: Answer: MySQL was used with JPA/Hibernate.
+P043 [Normal]: Q17. What is JPA?
+P044 [Normal]: Answer: JPA is a Java specification for mapping Java objects to relational database tables.
+P045 [Normal]: Q18. What is Hibernate?
+P046 [Normal]: Answer: Hibernate is an ORM implementation commonly used with JPA.
+P047 [Normal]: Q19. What is a DTO?
+P048 [Normal]: Answer: A DTO transfers data between layers or across APIs without exposing internal entity structure.
+P049 [Normal]: Q20. What is a repository?
+P050 [Normal]: Answer: A repository abstracts database operations, commonly by extending Spring Data JPA interfaces.
+P051 [Normal]: Q21. What is a service layer?
+P052 [Normal]: Answer: The service layer contains business logic and coordinates repository operations.
+P053 [Normal]: Q22. What is a controller?
+P054 [Normal]: Answer: A controller receives HTTP requests and returns API responses.
+P055 [Normal]: Q23. What is validation?
+P056 [Normal]: Answer: Validation checks whether incoming data satisfies required rules before processing.
+P057 [Normal]: Q24. How did you test APIs?
+P058 [Normal]: Answer: APIs were tested using Postman collections and backend automated tests.
+P059 [Normal]: Q25. What is MockMvc?
+P060 [Normal]: Answer: MockMvc tests Spring MVC controllers without starting a full HTTP server.
+P061 [Normal]: Q26. What is Mockito?
+P062 [Normal]: Answer: Mockito creates mocks for unit testing dependencies.
+P063 [Normal]: Q27. What is OpenFeign?
+P064 [Normal]: Answer: OpenFeign is a declarative HTTP client for service-to-service calls.
+P065 [Normal]: Q28. Where is OpenFeign used?
+P066 [Normal]: Answer: Admin Service uses it to fetch delivery-related information.
+P067 [Normal]: Q29. What is eventual consistency?
+P068 [Normal]: Answer: It means distributed data becomes consistent after asynchronous processing completes.
+P069 [Normal]: Q30. What happens if Tracking Service is down?
+P070 [Normal]: Answer: RabbitMQ can retain messages until the consumer becomes available, depending on queue configuration.
+P071 [Normal]: Q31. What is the main customer workflow?
+P072 [Normal]: Answer: Login, book delivery, view deliveries, and track shipment status.
+P073 [Normal]: Q32. What is the admin workflow?
+P074 [Normal]: Answer: Login, manage users, deliveries, hubs, reports, and dashboard summaries.
+P075 [Normal]: Q33. What is the use of Flyway?
+P076 [Normal]: Answer: Flyway manages database migration scripts and repeatable schema setup.
+P077 [Normal]: Q34. What is Spring Security?
+P078 [Normal]: Answer: Spring Security provides authentication and authorization support.
+P079 [Normal]: Q35. Why use BCrypt?
+P080 [Normal]: Answer: BCrypt hashes passwords securely before storage.
+P081 [Normal]: Q36. What is CORS?
+P082 [Normal]: Answer: CORS controls browser-based cross-origin requests between frontend and backend.
+P083 [Normal]: Q37. What is the difference between monolith and microservices?
+P084 [Normal]: Answer: A monolith packages features together, while microservices split functions into independently deployable services.
+P085 [Normal]: Q38. What is the disadvantage of microservices?
+P086 [Normal]: Answer: They add complexity in communication, deployment, observability, and data consistency.
+P087 [Normal]: Q39. What is a status code 401?
+P088 [Normal]: Answer: 401 means unauthenticated or invalid token.
+P089 [Normal]: Q40. What is a status code 403?
+P090 [Normal]: Answer: 403 means authenticated but not authorized.
+P091 [Normal]: Q41. What is a status code 404?
+P092 [Normal]: Answer: 404 means requested resource was not found.
+P093 [Normal]: Q42. What is a status code 400?
+P094 [Normal]: Answer: 400 means invalid request data.
+P095 [Normal]: Q43. What was your biggest challenge?
+P096 [Normal]: Answer: Understanding integration between gateway, JWT, services, and RabbitMQ.
+P097 [Normal]: Q44. How did you solve integration issues?
+P098 [Normal]: Answer: By testing endpoints step by step, checking logs, validating configuration, and using Postman.
+P099 [Normal]: Q45. What did you learn from this project?
+P100 [Normal]: Answer: Full stack development, microservices design, API testing, validation, and documentation.
+P101 [Normal]: Q46. What is future scope?
+P102 [Normal]: Answer: AI route optimization, real-time GPS tracking, cloud deployment, and CI/CD automation.
+P103 [Normal]: Q47. Why is documentation important?
+P104 [Normal]: Answer: It helps evaluators and teammates understand architecture, APIs, tests, and design decisions.
+P105 [Normal]: Q48. What is the project type?
+P106 [Normal]: Answer: Training project.
+P107 [Normal]: Q49. How many major backend services are included?
+P108 [Normal]: Answer: Auth, Delivery, Tracking, Admin, API Gateway, Eureka, and Config Server are included in the backend ecosystem.
+P109 [Normal]: Q50. How would you improve the project?
+P110 [Normal]: Answer: Add stronger observability, Docker deployment, route optimization, payment integration, and production-grade security hardening.
+P111 [Heading 1]: One-Page Quick Revision Sheet
+P112 [List Bullet]: Project: SmartCourier Delivery Management System.
+P113 [List Bullet]: Nature: Training project, not a production client project.
+P114 [List Bullet]: Frontend: React, Vite, React Router, Context API, Axios.
+P115 [List Bullet]: Backend: Spring Boot microservices with controllers, services, repositories, DTOs, validation, and exception handling.
+P116 [List Bullet]: Services: API Gateway, Auth Service, Delivery Service, Tracking Service, Admin Service, Eureka Server, Config Server.
+P117 [List Bullet]: Security: JWT generated by Auth Service and validated at Gateway.
+P118 [List Bullet]: Messaging: RabbitMQ publishes delivery status events and Tracking Service consumes them.
+P119 [List Bullet]: Database: MySQL with database-per-service pattern and JPA/Hibernate.
+P120 [List Bullet]: Testing: Unit testing, controller testing, integration checks, Postman API testing, validation testing.
+P121 [List Bullet]: Future scope: AI route optimization, GPS tracking, cloud deployment, payment integration, CI/CD.
+P122 [Heading 1]: Frequently Asked Technical Questions
+P123 [Normal]: Question: Explain the request flow for booking a delivery.
+P124 [Normal]: Answer: React sends a request to API Gateway with JWT. Gateway validates the token and forwards the request to Delivery Service. Delivery Service stores the booking and may publish an event to RabbitMQ. The response returns through Gateway to React.
+P125 [Normal]: Question: Why is RabbitMQ better than direct service calls for tracking updates?
+P126 [Normal]: Answer: Tracking updates do not always need to block the user request. RabbitMQ decouples the producer and consumer, improves resilience, and supports eventual processing.
+P127 [Normal]: Question: How is role-based access handled?
+P128 [Normal]: Answer: The frontend protects routes by checking user role, and the gateway/backend validates JWT claims and secured endpoints.
+P129 [Normal]: Question: What is the role of DTOs?
+P130 [Normal]: Answer: DTOs prevent direct entity exposure and keep API payloads stable even if internal database entities change.
+P131 [Normal]: Question: What are production improvements needed?
+P132 [Normal]: Answer: Secrets should be moved to secure vaults, queues should be durable with dead-letter handling, logs and metrics should be centralized, and deployment should use containers and CI/CD.
+
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Backend/SmartCourierDeliveryManagementSystem_Sprint-smartcourier-upload/api-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/Backend/SmartCourierDeliveryManagementSystem_Sprint-smartcourier-upload/auth-service/pom.xml" />
+        <option value="$PROJECT_DIR$/Backend/SmartCourierDeliveryManagementSystem_Sprint-smartcourier-upload/admin-service/pom.xml" />
+        <option value="$PROJECT_DIR$/Backend/SmartCourierDeliveryManagementSystem_Sprint-smartcourier-upload/config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/Backend/SmartCourierDeliveryManagementSystem_Sprint-smartcourier-upload/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/Backend/SmartCourierDeliveryManagementSystem_Sprint-smartcourier-upload/delivery-service/pom.xml" />
+        <option value="$PROJECT_DIR$/Backend/SmartCourierDeliveryManagementSystem_Sprint-smartcourier-upload/tracking-service/pom.xml" />
+        <option value="$PROJECT_DIR$/Backend/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/Backend/config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/Backend/auth-service/pom.xml" />
+        <option value="$PROJECT_DIR$/Backend/delivery-service/pom.xml" />
+        <option value="$PROJECT_DIR$/Backend/admin-service/pom.xml" />
+        <option value="$PROJECT_DIR$/Backend/tracking-service/pom.xml" />
+        <option value="$PROJECT_DIR$/Backend/api-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/Backend/smartcourier-common/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_25" project-jdk-name="21" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
